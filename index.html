@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValVoice | Game Chat Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="logo.png" alt="ValVoice Logo" class="custom-logo">
+                <h1>VALVOICE</h1>
+            </div>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-btns">
+                <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+<!-- Video Background Section -->
+<section class="video-section">
+  <!-- Video (autoplay, muted, loop) -->
+  <video autoplay muted loop playsinline>
+    <source src="backgroundvideo.mp4" type="video/mp4">
+    <!-- Fallback text if video fails -->
+    Your browser does not support video backgrounds.
+  </video>
+
+  <!-- Text Overlay -->
+  <div class="video-overlay">
+    <h1>TEXT CHAT TO <span>VOICE</span> COMMS</h1>
+    <p>Convert in-game text chat to spoken voice instantly.</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn-val-primary">DOWNLOAD NOW</a>
+      <a href="https://discord.gg/HdSnWzYkP" class="btn-val-secondary" target="_blank" rel="noopener noreferrer"><span class="btn-text">JOIN DISCORD</span></a>
+    </div>
+  </div>
+</section>
+ 
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Powerful Features</h2>
+                <p>Enhance your Valorant experience with our innovative solution</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant TTS</h3>
+                    <p>Your typed messages are read aloud to your teammates the moment they're sent.</p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>All Chats Supported</h3>
+                    <p>Works seamlessly across Party, Team, and All chat channels in Valorant.</p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3>Team Audio Routing</h3>
+                    <p>ValVoice routes speech directly into your mic input using VB-Cable, keeping game audio safe.</p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>100% Safe & Local</h3>
+                    <p>Uses screen OCR so it never touches game files or triggers anti-cheat. Credentials stay local.</p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Privacy First</h3>
+                    <p>Zero tracking, no analytics, encrypted connections, and local-only processing.</p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Voice Engine</h3>
+                    <p>Powered by an advanced XTTS engine to provide 30+ high-quality, realistic agent voices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>How It Works</h2>
+                <p>Three simple steps to start broadcasting your chat</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-number">1</div>
+                    <h4>Install VB-CABLE</h4>
+                    <p>Download and install the free virtual audio cable to route the sound.</p>
+                </div>
+                
+                <div class="step reveal">
+                    <div class="step-number">2</div>
+                    <h4>Configure Valorant</h4>
+                    <p>Go to Audio &gt; Voice Chat settings and set your Input Device to "CABLE Output".</p>
+                </div>
+                
+                <div class="step reveal">
+                    <div class="step-number">3</div>
+                    <h4>Launch & Play</h4>
+                    <p>Pick your AI voice, select your chats, and let your team hear you type!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>User Testimonials</h2>
+                <p>See what players are saying about ValVoice</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-content">
+                        "You are a community treasure my friend. If this works, It will be a godsend for me in the future. I have lost count of the number of times when my teammate is typing in chat instead of using their mic, resulting in vital information falling on deaf ears being mid gun fight."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h5>Anonymous</h5>
+                            <p>Reddit User</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-content">
+                        "That sounds like a pretty interesting and potentially useful application, especially for people who may not be able to use voice chat for various reasons but still want to be able to communicate in real time with their team in Valorant."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h5>Anonymous</h5>
+                            <p>Reddit User</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-content">
+                        "Being a girl, this will honestly save me a lot of sanity when not wanting to talk when there are toxic people in my match and risk my mental because of it. I definitely see using this in the future."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h5>Anonymous</h5>
+                            <p>Reddit User</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta" id="download">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Ready to Enhance Your Game?</h2>
+                <p>Download ValVoice today and experience seamless communication like never before.</p>
+                
+                <div class="hero-btns">
+                    <a href="#" class="btn btn-primary btn-lg">Download Now</a>
+                    <a href="#" class="btn btn-secondary btn-lg">Apply Referral Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about ValVoice</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is ValVoice safe to use with Valorant?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, ValVoice is completely safe. It doesn't touch game files or inject anything into Valorant. It operates entirely locally using screen OCR to read chat, which is a safe, non-invasive method.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Does ValVoice affect game performance?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ValVoice is lightweight and efficient. It runs quietly in your system tray alongside the game. Note that the local XTTS AI voice engine may take approximately 90-100 seconds to start on first launch.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I customize the voices?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! ValVoice runs a powerful AI voice engine locally on your PC, giving you access to 30+ realistic, high-quality agent voices.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I install ValVoice?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Installation is simple: first install the free VB-CABLE to route audio, then set your Valorant Input Device to "CABLE Output", and finally launch ValVoice to begin broadcasting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="ValVoice Logo" class="custom-logo">
+                        <span>ValVoice</span>
+                    </div>
+                    <p>Transform your Valorant experience with real-time text-to-voice conversion for in-game chat.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://discord.gg/HdSnWzYkP" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:valorantvoiceofficials@gmail.com" title="Email Us"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#features"><i class="fas fa-chevron-right"></i> Features</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="#download"><i class="fas fa-chevron-right"></i> Download</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Refund Policy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#faq"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Documentation</a></li>
+                        <li><a href="https://discord.gg/HdSnWzYkP" target="_blank" rel="noopener noreferrer"><i class="fas fa-chevron-right"></i> Discord Server</a></li>
+                        <li><a href="mailto:valorantvoiceofficials@gmail.com"><i class="fas fa-chevron-right"></i> Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 ValVoice. All rights reserved. This site is not affiliated with Riot Games or Valorant.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
