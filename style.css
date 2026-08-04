@@ -792,6 +792,40 @@ section {
     gap: 15px;
 }
 
+/* Early Access Announcement Banner */
+.early-access-notice {
+    margin: 22px auto 0 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 20px;
+    background: linear-gradient(135deg, rgba(255, 70, 85, 0.1) 0%, rgba(118, 136, 197, 0.12) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13.5px !important;
+    font-weight: 400 !important;
+    color: #e2e8f0 !important;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), 0 0 20px rgba(255, 70, 85, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.early-access-notice:hover {
+    background: linear-gradient(135deg, rgba(255, 70, 85, 0.15) 0%, rgba(118, 136, 197, 0.18) 100%);
+    border-color: rgba(255, 70, 85, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 70, 85, 0.15);
+}
+
+.early-access-notice .highlight-free {
+    color: #00ff88;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.25);
+}
+
 /* Footer */
 footer {
     background: #04070a;
@@ -949,5 +983,12 @@ footer {
     }
     .hero-btns {
         flex-direction: column;
+    }
+    .early-access-notice {
+        font-size: 12px !important;
+        padding: 6px 14px;
+        margin-top: 16px !important;
+        line-height: 1.4;
+        border-radius: 20px;
     }
 }
