@@ -1,59 +1,90 @@
 <div align="center">
-  <img src="logo.png" alt="ValVoice Logo" width="150"/>
+  <img src="logo.png" alt="ValVoice Logo" width="180"/>
   <h1>🎙️ ValVoice: The Ultimate Game Chat Assistant</h1>
   <p><strong>Transform your Valorant experience with real-time text-to-voice conversion for in-game chat.</strong></p>
   
-  [![Website](https://img.shields.io/badge/Website-Live-brightgreen.svg)](https://valvoice.vercel.app/) <!-- Update link as needed -->
-  [![Discord](https://img.shields.io/discord/1234567890?color=7289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/nzHKWXU9TD)
+  [![Website](https://img.shields.io/badge/Website-Live-brightgreen.svg?style=for-the-badge)](https://valvoice.vercel.app/)
+  [![Discord](https://img.shields.io/discord/1234567890?color=7289da&label=Discord&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/nzHKWXU9TD)
+  [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](#)
 </div>
 
 <br/>
 
-## 🚀 Welcome to the ValVoice Site Repository
+## 📖 What is ValVoice?
 
-This repository hosts the landing page and promotional website for **ValVoice**, a revolutionary tool designed to enhance communication in Valorant. ValVoice instantly converts typed text chat into spoken voice using a powerful local AI engine, bridging the gap between text-only players and voice comms.
+**ValVoice** is a revolutionary, 100% safe, and fully local accessibility and communication tool designed specifically for Valorant players. It acts as a bridge between players who prefer to type (text chat) and players who rely on voice comms. 
 
-## ✨ Features Highlighted on the Site
+Whenever you type a message in Valorant's text chat (Party, Team, or All chat), ValVoice instantly reads the screen, processes the text, and synthesizes it into highly realistic spoken audio using an advanced local AI engine. This audio is then routed directly into your microphone input, allowing your teammates to hear your text messages as if you were speaking them aloud.
 
-Our landing page is designed to showcase the incredible capabilities of ValVoice with a premium, engaging aesthetic:
-- **Instant TTS**: Instantaneous read-aloud functionality for typed messages.
-- **AI Voice Engine**: Powered by advanced XTTS, offering 30+ high-quality, realistic agent voices.
-- **Privacy & Safety First**: 100% local processing using screen OCR. Zero tracking, zero game file modifications, and 100% anti-cheat safe.
-- **Universal Chat Support**: Works seamlessly across Party, Team, and All chat channels.
+### Why use ValVoice?
+- **Toxicity & Anxiety:** Communicate crucial game information without needing to speak on the microphone.
+- **Accessibility:** Perfect for players who are non-verbal, have speech impediments, or play in noisy environments.
+- **Immersion:** Sound exactly like your favorite Valorant agent using our AI voice cloning engine.
 
-## 🎨 Web Design Aesthetics
+---
 
-Built using HTML, CSS, and JS, this site focuses on:
-- **Rich Visuals**: Utilizing video backgrounds and glassmorphism.
-- **Dynamic Interactions**: Micro-animations and reveal effects on scroll.
-- **Responsive Layout**: Perfect viewing experience on both desktop and mobile devices.
+## 🎯 Key Features
 
-## 🛠️ Getting Started Locally
+- **⚡ Instant Text-to-Speech (TTS):** Millisecond-latency screen reading ensures your messages are broadcasted exactly when you hit enter.
+- **🤖 Advanced AI Voice Cloning:** Powered by a customized Coqui XTTS v2 engine, providing access to over 30+ highly realistic, emotion-rich agent voices.
+- **🛡️ 100% Anti-Cheat Safe (Vanguard Approved):** ValVoice uses pure Screen OCR (Optical Character Recognition). It **does not** inject into the game, read memory, intercept network packets, or modify game files.
+- **🔒 Privacy First & Fully Local:** Your game chat and credentials never leave your PC. All AI processing happens completely offline on your local CPU/GPU.
+- **🎛️ Smart Audio Routing:** Intelligently routes audio directly into the game via VB-CABLE, ensuring your desktop audio or game sounds don't echo into your mic.
 
-To run the ValVoice website locally:
+---
+
+## 🏗️ Technical Architecture
+
+Understanding how ValVoice operates under the hood:
+
+1. **OCR Pipeline (C# / .NET 8):** A highly optimized background sidecar (`ValVoiceOCR.exe`) continuously scans a designated anchor region of your screen using Windows Graphics Capture (WGC) and the native Windows OCR API.
+2. **Backend Engine (Java 23 / JavaFX):** The core application that handles UI, filters chat, and manages game state tracking. It receives JSON payloads from the OCR pipeline.
+3. **AI Synthesizer (Python / PyTorch):** A FastAPI server running Coqui XTTS v2 processes the filtered text and reference `.wav` files to synthesize realistic audio.
+4. **Audio Router (Windows SAPI / VB-CABLE):** The synthesized audio is played specifically through a virtual audio cable, which Valorant recognizes as your microphone.
+
+---
+
+## 💻 About This Repository (ValVoice-Site)
+
+This repository contains the source code for the **official ValVoice landing page and promotional website**. It is designed to convert visitors into users with a premium, sleek, and modern aesthetic that matches the gaming ecosystem.
+
+### Tech Stack
+- **HTML5:** Semantic structure and accessibility.
+- **Vanilla CSS3:** Custom design system, glassmorphism UI, micro-animations, and responsive layouts.
+- **Vanilla JavaScript:** Smooth scrolling, dynamic reveals, and mobile navigation.
+
+### Local Development Setup
+
+If you want to contribute to the website's design or content:
 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/ValoVoice/ValVoice-Site.git
    cd ValVoice-Site
    ```
-2. **Serve the site:**
-   You can use any local web server. For example, using Python:
-   ```bash
-   python -m http.server 8000
-   ```
-   Or using Node.js (`serve`):
-   ```bash
-   npx serve .
-   ```
-3. **Open in browser:**
-   Navigate to `http://localhost:8000` (or the port specified by your server).
-
-## 🤝 Contributing
-
-We welcome contributions! If you have ideas for improving the site's design, adding new animations, or enhancing SEO, please feel free to fork the repository and submit a pull request. Let's make the ValVoice experience even better, together!
+2. **Serve the site locally:**
+   Since this is a static site, you can use any local web server. 
+   - *Using Python:* `python -m http.server 8000`
+   - *Using Node.js:* `npx serve .`
+   - *Using VS Code:* Install the "Live Server" extension and click "Go Live".
+3. **View the site:**
+   Open your browser and navigate to `http://localhost:8000`.
 
 ---
+
+## 🤝 Contributing to the Website
+
+We welcome all contributions! Whether it's fixing a typo, improving SEO, or completely revamping a section with new CSS animations:
+
+1. Fork this repository.
+2. Create a new branch (`git checkout -b feature/AmazingDesign`).
+3. Commit your changes (`git commit -m 'Add some AmazingDesign'`).
+4. Push to the branch (`git push origin feature/AmazingDesign`).
+5. Open a Pull Request.
+
+---
+
 <div align="center">
+  <p><strong>Transform the way you communicate.</strong></p>
   <p>Built with ❤️ by the ValVoice Team.</p>
 </div>
