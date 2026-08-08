@@ -3,7 +3,8 @@
   <h1>🎙️ ValVoice: The Ultimate Game Chat Assistant</h1>
   <p><strong>Transform your Valorant experience with real-time text-to-voice conversion for in-game chat.</strong></p>
   
-  [![Website](https://img.shields.io/badge/Website-Live-brightgreen.svg?style=for-the-badge)](https://valvoice.vercel.app/)
+  [![Official Website](https://img.shields.io/badge/🌐_Official-Website-brightgreen.svg?style=for-the-badge)](https://valvoice.vercel.app/)
+  [![Download ValVoice](https://img.shields.io/badge/⬇️_Download-ValVoice-blue.svg?style=for-the-badge)](https://valvoice.vercel.app/)
   [![Discord](https://img.shields.io/discord/1234567890?color=7289da&label=Discord&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/nzHKWXU9TD)
   [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](#)
 </div>
