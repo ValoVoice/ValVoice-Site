@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frequently Asked Questions | ValVoice</title>
-    <meta name="description" content="Answers to common questions about how ValVoice works, safety, and audio routing for Valorant.">
+    <title>Troubleshooting | ValVoice</title>
+    <meta name="description" content="Fix common issues with ValVoice, including OCR detection failures, audio routing issues, and voice engine initialization.">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://valvoice.vercel.app/faq.html">
-    <meta property="og:title" content="Frequently Asked Questions | ValVoice">
+    <meta property="og:url" content="https://valvoice.vercel.app/docs/troubleshooting.html">
+    <meta property="og:title" content="Troubleshooting | ValVoice">
     <meta property="og:description" content="ValVoice converts Valorant in-game text chat into spoken audio instantly using local OCR. Communicate safely without a microphone.">
     <meta property="og:image" content="https://valvoice.vercel.app/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://valvoice.vercel.app/faq.html">
-    <meta property="twitter:title" content="Frequently Asked Questions | ValVoice">
+    <meta property="twitter:url" content="https://valvoice.vercel.app/docs/troubleshooting.html">
+    <meta property="twitter:title" content="Troubleshooting | ValVoice">
     <meta property="twitter:description" content="ValVoice converts Valorant in-game text chat into spoken audio instantly using local OCR. Communicate safely without a microphone.">
     <meta property="twitter:image" content="https://valvoice.vercel.app/og-image.jpg">
 
-    <link rel="canonical" href="https://valvoice.vercel.app/faq.html">
+    <link rel="canonical" href="https://valvoice.vercel.app/docs/troubleshooting.html">
     <link rel="icon" type="image/png" href="logo.png">
 
     
@@ -58,40 +58,24 @@
     </header>
 <main>
 <div class="container" style="padding-top: 120px; padding-bottom: 80px; min-height: 80vh;">
-    <h1 style="font-size: 3rem; margin-bottom: 2rem; color: #fff;">Frequently Asked Questions</h1>
-    
+    <h1 style="font-size: 3rem; margin-bottom: 1rem; color: #fff;">Troubleshooting</h1>
     <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 2rem; margin-bottom: 3rem;">
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">What is ValVoice?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">ValVoice is a Windows desktop application that converts Valorant in-game text chat into spoken voice.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">It uses screen OCR to recognize chat text and local text-to-speech to turn that text into audio, helping players communicate without reading chat manually.</p>
-
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">How does ValVoice convert Valorant text chat into voice?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">ValVoice reads visible Valorant text chat using screen OCR and converts the detected messages into speech.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">The speech is generated locally and can be piped into a virtual audio cable, which Valorant uses as its microphone input. Your teammates hear the AI voice in real time.</p>
-
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">Does ValVoice work on Windows?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">Yes, ValVoice is exclusively a Windows desktop application.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">Because Valorant is a Windows game, the software runs locally alongside the client.</p>
-
         
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">What is screen OCR?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">Screen OCR (Optical Character Recognition) is a technology that recognizes text visible on the screen and extracts it into digital text.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">ValVoice uses this to safely read chat without touching the game files.</p>
+        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">Valorant chat not being detected (OCR issues)</h3>
+        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; line-height: 1.6;">ValVoice uses screen OCR to read the chat. If it is not detecting text: ensure Valorant is running in Windowed Fullscreen or Fullscreen mode at a standard aspect ratio. Make sure the chat box is visible and not obscured by overlays.</p>
+        
+        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">No voice output in game</h3>
+        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; line-height: 1.6;">If the app detects the text but teammates hear nothing, verify your <a href="/docs/valorant-audio-settings.html" style="color: #ff4655;">Valorant audio settings</a>. Ensure the Input Device is set to "CABLE Output".</p>
+        
+        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">Voice engine not responding</h3>
+        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; line-height: 1.6;">The local XTTS engine requires resources. On first launch, it may take 60-90 seconds to load the models into memory. Please wait during the initial startup sequence.</p>
 
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">What is Valorant text-to-voice?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">Valorant text-to-voice refers to the process of instantly converting in-game text messages typed by players into spoken audio, allowing teammates to hear the chat rather than reading it.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">ValVoice performs this automatically during gameplay.</p>
-<h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">Does ValVoice read Valorant text chat using OCR?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">Yes, ValVoice strictly uses screen OCR to read chat.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">It does not inject into game files or memory, making it a safe external accessibility tool.</p>
-
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">Is ValVoice safe to use with Valorant?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">Yes, ValVoice is safe to use as it relies entirely on local visual recognition.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">Because it does not modify the Valorant client or its memory space, it operates safely alongside Vanguard.</p>
-
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">What is VB-CABLE used for?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">VB-CABLE is a virtual audio device used to route ValVoice's speech output directly into Valorant's microphone input.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">It acts as a bridge, tricking the game into accepting the synthesized voice as your actual microphone.</p>
+        <h3 style="color: #ff4655; margin-bottom: 0.5rem; font-size: 1.4rem;">Key Takeaways</h3>
+        <ul style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6; margin-left: 1.5rem;">
+            <li>Screen OCR requires the chat box to be clearly visible on screen.</li>
+            <li>Audio routing failures are usually resolved by verifying the VB-CABLE selection in Valorant settings.</li>
+            <li>The local voice engine takes time to initialize on startup.</li>
+        </ul>
     </div>
 </div>
 </main>
