@@ -3,70 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ValVoice — Valorant Text-to-Voice Game Chat Assistant</title>
-    <meta name="description" content="ValVoice is a Windows application that converts Valorant in-game text chat into spoken audio instantly using local OCR. Communicate safely without a microphone.">
+    <title>Frequently Asked Questions | ValVoice</title>
+    <meta name="description" content="Answers to common questions about how ValVoice works, safety, and audio routing for Valorant.">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://valvoice.vercel.app/">
-    <meta property="og:title" content="ValVoice — Valorant Text-to-Voice Game Chat Assistant">
-    <meta property="og:description" content="ValVoice converts Valorant in-game text chat into spoken audio instantly using local OCR. Communicate safely without a microphone.">
+    <meta property="og:url" content="https://valvoice.vercel.app/faq.html">
+    <meta property="og:title" content="Frequently Asked Questions | ValVoice">
+    <meta property="og:description" content="Answers to common questions about how ValVoice works, safety, and audio routing for Valorant.">
     <meta property="og:image" content="https://valvoice.vercel.app/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://valvoice.vercel.app/">
-    <meta property="twitter:title" content="ValVoice — Valorant Text-to-Voice Game Chat Assistant">
-    <meta property="twitter:description" content="ValVoice converts Valorant in-game text chat into spoken audio instantly using local OCR. Communicate safely without a microphone.">
+    <meta property="twitter:url" content="https://valvoice.vercel.app/faq.html">
+    <meta property="twitter:title" content="Frequently Asked Questions | ValVoice">
+    <meta property="twitter:description" content="Answers to common questions about how ValVoice works, safety, and audio routing for Valorant.">
     <meta property="twitter:image" content="https://valvoice.vercel.app/og-image.jpg">
 
     <link rel="canonical" href="https://valvoice.vercel.app/faq.html">
     <link rel="icon" type="image/png" href="logo.png">
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://valvoice.vercel.app/#website",
-          "url": "https://valvoice.vercel.app/",
-          "name": "ValVoice",
-          "description": "Valorant Text-to-Voice Game Chat Assistant",
-          "publisher": {
-            "@id": "https://valvoice.vercel.app/#organization"
-          }
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://valvoice.vercel.app/#organization",
-          "name": "ValVoice",
-          "url": "https://valvoice.vercel.app/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://valvoice.vercel.app/logo.png"
-          },
-          "sameAs": [
-            "https://discord.gg/HdSnWzYkP"
-          ]
-        },
-        {
-          "@type": "SoftwareApplication",
-          "@id": "https://valvoice.vercel.app/#software",
-          "name": "ValVoice",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Windows",
-          "description": "A Windows application that uses OCR and text-to-speech to read Valorant in-game text chat aloud.",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          }
-        }
-      ]
-    }
-    </script>
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,7 +56,26 @@
             </div>
         </div>
     </header>
-<main><div class="container" style="padding-top: 120px; padding-bottom: 80px; min-height: 80vh;"><h1 style="font-size: 3rem; margin-bottom: 2rem; color: #fff;">Frequently Asked Questions</h1><div style="color: rgba(255,255,255,0.8); line-height: 1.8; font-size: 1.1rem;"><h3>Is ValVoice safe to use with Valorant?</h3><p>Yes, ValVoice is completely safe. It doesn't touch game files or inject anything into Valorant. It operates entirely locally using screen OCR to read chat, which is a safe, non-invasive method.</p><h3>Does ValVoice modify Valorant game files?</h3><p>No. ValVoice strictly uses visual recognition (OCR) on your screen to read chat.</p><h3>How does the local AI voice engine work?</h3><p>ValVoice runs a powerful AI voice engine (XTTS) locally on your PC to provide realistic voices with zero latency to the cloud.</p></div></div></main>
+<main><div class="container" style="padding-top: 120px; padding-bottom: 80px; min-height: 80vh;">
+<h1 style="font-size: 3rem; margin-bottom: 2rem; color: #fff;">Frequently Asked Questions</h1>
+<div style="color: rgba(255,255,255,0.8); line-height: 1.8; font-size: 1.1rem; margin-bottom: 2rem;">
+    <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">What is ValVoice?</h3>
+    <p style="margin-bottom: 1rem;">ValVoice is a Windows desktop application that converts Valorant in-game text chat into spoken voice using screen OCR and text-to-speech.</p>
+    <p style="margin-bottom: 2rem;">It is designed for players who prefer typing, cannot use a microphone, or simply want hands-free awareness of team chat without looking away from the crosshair.</p>
+
+    <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">How does ValVoice work?</h3>
+    <p style="margin-bottom: 1rem;">ValVoice reads visible Valorant text chat using screen OCR, converts detected messages into speech, and routes the generated audio through a virtual audio device.</p>
+    <p style="margin-bottom: 2rem;">The speech output is piped into a virtual audio cable (VB-CABLE), which Valorant is configured to use as its microphone input. This allows your teammates to hear the AI-generated voice in real time.</p>
+
+    <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">Is ValVoice safe to use with Valorant?</h3>
+    <p style="margin-bottom: 1rem;">Yes, ValVoice is completely safe to use. It operates entirely locally using screen OCR to read chat.</p>
+    <p style="margin-bottom: 2rem;">It does not touch game files, does not inject anything into the Valorant client, and operates as an external accessibility tool, making it a safe, non-invasive method.</p>
+
+    <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">Does ValVoice use a local AI voice engine?</h3>
+    <p style="margin-bottom: 1rem;">Yes. ValVoice runs a powerful AI voice engine (XTTS) locally on your PC to provide realistic voices.</p>
+    <p style="margin-bottom: 2rem;">By running locally, no chat logs or data are sent to the cloud, ensuring your privacy and achieving zero network latency for voice generation.</p>
+</div>
+</div></main>
 
     <!-- Footer -->
     <footer>
