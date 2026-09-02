@@ -110,7 +110,7 @@ header.scrolled {
     border-radius: 4px;
 }
 
-.logo h1 {
+.logo .site-name {
     font-family: 'Outfit', sans-serif;
     font-weight: 500;
     font-size: 20px;
