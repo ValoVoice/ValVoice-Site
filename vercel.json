@@ -1,9 +1,9 @@
 {
-  "redirects": [
-    {
-      "source": "/download",
-      "destination": "https://github.com/ValoVoice/ValVoice-Releases/releases/download/v1.2.0/ValVoice-Setup.exe",
-      "permanent": false
-    }
-  ]
+    "redirects":  [
+                      {
+                          "destination":  "https://github.com/ValoVoice/ValVoice-Releases/releases/download/v1.2.1/ValVoice-Setup.exe",
+                          "permanent":  false,
+                          "source":  "/download"
+                      }
+                  ]
 }
