@@ -349,6 +349,7 @@
                         <li><i class="fas fa-check"></i> Full access to OCR & TTS</li>
                         <li><i class="fas fa-check"></i> Unlimited access</li>
                         <li><i class="fas fa-check"></i> Cancel anytime</li>
+                        <li id="pro-priority-support"><i class="fas fa-check"></i> Priority support</li>
                     </ul>
                     <a href="#" class="btn-val-primary pricing-btn" id="pro-cta" onclick="return false;" style="cursor: not-allowed; opacity: 0.8;">Get Yearly Access</a>
                 </div>
@@ -538,6 +539,9 @@
                 savingsEl.style.display = 'none';
                 ctaEl.textContent = 'Get Monthly Access';
                 
+                const prioritySupport = document.getElementById('pro-priority-support');
+                if(prioritySupport) prioritySupport.style.display = 'none';
+                
                 if(proCard) proCard.classList.remove('popular');
                 if(badge) badge.style.visibility = 'hidden';
             } else {
@@ -550,6 +554,9 @@
                 billingEl.textContent = 'billed annually';
                 savingsEl.style.display = 'block';
                 ctaEl.textContent = 'Get Yearly Access';
+                
+                const prioritySupport = document.getElementById('pro-priority-support');
+                if(prioritySupport) prioritySupport.style.display = 'flex';
                 
                 if(proCard) proCard.classList.add('popular');
                 if(badge) badge.style.visibility = 'visible';
