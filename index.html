@@ -535,7 +535,7 @@
                 
                 priceEl.innerHTML = '<span>$</span>3<span>/month</span>';
                 billingEl.textContent = 'billed monthly';
-                savingsEl.style.visibility = 'hidden';
+                savingsEl.style.display = 'none';
                 ctaEl.textContent = 'Get Monthly Access';
                 
                 if(proCard) proCard.classList.remove('popular');
@@ -548,7 +548,7 @@
                 
                 priceEl.innerHTML = '<span>$</span>15<span>/year</span>';
                 billingEl.textContent = 'billed annually';
-                savingsEl.style.visibility = 'visible';
+                savingsEl.style.display = 'block';
                 ctaEl.textContent = 'Get Yearly Access';
                 
                 if(proCard) proCard.classList.add('popular');
