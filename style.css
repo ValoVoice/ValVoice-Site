@@ -1153,9 +1153,13 @@ a.clickable-step:hover {
     padding: 4px;
     margin-bottom: 20px;
     width: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .toggle-option {
+    background: transparent;
+    border: none;
+    font-family: inherit;
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -1165,6 +1169,11 @@ a.clickable-step:hover {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.toggle-option:focus-visible {
+    outline: 2px solid var(--valorant-red);
+    outline-offset: 2px;
+}
+
 .toggle-option.active {
     background: var(--valorant-red);
     color: #fff;
@@ -1172,12 +1181,21 @@ a.clickable-step:hover {
 }
 
 .savings-msg {
-    color: var(--valorant-red);
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-top: -20px;
+    margin-top: 15px;
     margin-bottom: 25px;
-    min-height: 1.2em; /* Keep layout stable when hidden */
+}
+
+.savings-msg .savings-highlight {
+    color: #10b981;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.savings-msg .savings-subtext {
+    color: #10b981;
+    font-size: 0.85rem;
+    opacity: 0.9;
 }
 
 /* Neutral Buttons for Free / Lifetime */
