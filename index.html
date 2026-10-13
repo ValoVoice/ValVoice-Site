@@ -349,7 +349,7 @@
                         <li><i class="fas fa-check"></i> More profile avatars</li>
                         <li><i class="fas fa-check"></i> Full access to agent voices</li>
                         <li><i class="fas fa-check"></i> Unlimited narration</li>
-                        <li><i class="fas fa-check"></i> All core features</li>
+                        <li id="pro-support-item"><i class="fas fa-check"></i> Priority support</li>
                         <li><i class="fas fa-check"></i> Cancel anytime</li>
                     </ul>
                     <a href="#" class="btn-val-primary pricing-btn" id="pro-cta" onclick="return false;" style="cursor: not-allowed; opacity: 0.8;">Get Yearly Access</a>
@@ -540,6 +540,9 @@
                 if (savingsEl) savingsEl.style.display = 'none';
                 if (ctaEl) ctaEl.textContent = 'Get Monthly Access';
                 if (badge) badge.style.display = 'none';
+                
+                const supportItem = document.getElementById('pro-support-item');
+                if (supportItem) supportItem.innerHTML = '<i class="fas fa-check"></i> All core features';
             } else {
                 yearlyBtn.classList.add('active');
                 yearlyBtn.setAttribute('aria-checked', 'true');
@@ -551,6 +554,9 @@
                 if (savingsEl) savingsEl.style.display = 'block';
                 if (ctaEl) ctaEl.textContent = 'Get Yearly Access';
                 if (badge) badge.style.display = 'block';
+                
+                const supportItem = document.getElementById('pro-support-item');
+                if (supportItem) supportItem.innerHTML = '<i class="fas fa-check"></i> Priority support';
             }
         }
 
