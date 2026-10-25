@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValVoice Pricing &amp; Plans | ValVoice</title>
+    <meta name="description" content="Explore simple, transparent pricing plans for ValVoice. Get started for free, or unlock unlimited real-time Valorant text-to-speech chat conversion with Pro and Lifetime plans.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://valvoice.vercel.app/pricing.html">
+    <meta property="og:title" content="ValVoice Pricing &amp; Plans | ValVoice">
+    <meta property="og:description" content="Explore simple, transparent pricing plans for ValVoice. Get started for free, or unlock unlimited real-time Valorant text-to-speech chat conversion with Pro and Lifetime plans.">
+    <meta property="og:image" content="https://valvoice.vercel.app/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://valvoice.vercel.app/pricing.html">
+    <meta property="twitter:title" content="ValVoice Pricing &amp; Plans | ValVoice">
+    <meta property="twitter:description" content="Explore simple, transparent pricing plans for ValVoice. Get started for free, or unlock unlimited real-time Valorant text-to-speech chat conversion with Pro and Lifetime plans.">
+    <meta property="twitter:image" content="https://valvoice.vercel.app/og-image.jpg">
+
+    <link rel="canonical" href="https://valvoice.vercel.app/pricing.html">
+    <link rel="icon" type="image/png" href="/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="/" class="logo">
+                <img src="/logo.png" alt="ValVoice Logo" class="custom-logo">
+                <div class="site-name">VALVOICE</div>
+            </a>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="/#features">Features</a></li>
+                    <li><a href="/#how-it-works">How It Works</a></li>
+                    <li><a href="/#testimonials">Testimonials</a></li>
+                    <li><a href="/pricing.html" class="active">Pricing</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-btns">
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pricing-hero" style="padding-top: 130px; padding-bottom: 20px; text-align: center;">
+            <div class="container" style="max-width: 900px; margin: 0 auto;">
+                <span style="background: rgba(255,70,85,0.12); color: #ff4655; border: 1px solid rgba(255,70,85,0.3); padding: 6px 18px; border-radius: 9999px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: inline-block; margin-bottom: 1.25rem;">
+                    Transparent, Simple Pricing
+                </span>
+                <h1 style="font-size: 3rem; font-weight: 800; color: #fff; margin-bottom: 1rem; font-family: 'Outfit', sans-serif; line-height: 1.2;">
+                    Choose Your ValVoice Plan
+                </h1>
+                <p style="font-size: 1.15rem; color: rgba(255,255,255,0.75); line-height: 1.7; margin: 0 auto; max-width: 680px;">
+                    Unlock seamless real-time Valorant in-game text-to-speech chat conversion. Start with our free evaluation or upgrade to Pro and Lifetime for unlimited high-performance narration.
+                </p>
+            </div>
+        </section>
+
+        <!-- Pricing Cards -->
+        <section class="pricing" id="pricing-plans" style="padding-top: 20px; padding-bottom: 60px; background: transparent;">
+            <div class="container">
+                <div class="pricing-grid">
+                    <!-- Free Plan -->
+                    <div class="pricing-card" style="border-color: rgba(255,255,255,0.08);">
+                        <h3>Free</h3>
+                        <div class="price"><span>$</span>0</div>
+                        <p class="billing-desc">Limited weekly usage</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check" style="color: rgba(255,255,255,0.5);"></i> Core ValVoice screen OCR</li>
+                            <li><i class="fas fa-check" style="color: rgba(255,255,255,0.5);"></i> Try agent voices locally</li>
+                            <li><i class="fas fa-check" style="color: rgba(255,255,255,0.5);"></i> Limited weekly messages</li>
+                            <li><i class="fas fa-check" style="color: rgba(255,255,255,0.5);"></i> Virtual audio cable routing</li>
+                            <li><i class="fas fa-check" style="color: rgba(255,255,255,0.5);"></i> Discord community support</li>
+                        </ul>
+                        <a href="/download" class="btn-val-neutral pricing-btn">Get Started Free</a>
+                    </div>
+                    
+                    <!-- Pro Plan -->
+                    <div class="pricing-card popular" id="pro-card">
+                        <div class="popular-badge" id="pro-badge">Best Value</div>
+                        <h3>Pro</h3>
+                        
+                        <div class="billing-toggle" role="radiogroup" aria-label="Billing frequency">
+                            <button type="button" class="toggle-option" id="toggle-monthly" role="radio" aria-checked="false" onclick="setBilling('monthly')">Monthly</button>
+                            <button type="button" class="toggle-option active" id="toggle-yearly" role="radio" aria-checked="true" onclick="setBilling('yearly')">Yearly</button>
+                        </div>
+                        
+                        <div class="price" id="pro-price"><span>$</span>15<span>/year</span></div>
+                        <p class="billing-desc" id="pro-billing">billed annually</p>
+                        <div class="savings-msg" id="pro-savings">
+                            <div class="savings-highlight">Just $1.25/month</div>
+                            <div class="savings-subtext">Billed annually &mdash; 58% less than paying monthly.</div>
+                        </div>
+                        
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Unlimited real-time narration</li>
+                            <li><i class="fas fa-check"></i> Full 30+ agent voice library</li>
+                            <li><i class="fas fa-check"></i> More profile avatars</li>
+                            <li id="pro-support-item"><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> Cancel anytime with 1-click</li>
+                        </ul>
+                        <a href="/download" class="btn-val-primary pricing-btn" id="pro-cta">Download Free Client</a>
+                        <div style="font-size: 0.775rem; color: rgba(255,255,255,0.5); text-align: center; margin-top: 10px;">
+                            Paid checkout onboarding in progress via Paddle
+                        </div>
+                    </div>
+                    
+                    <!-- Lifetime Plan -->
+                    <div class="pricing-card" style="border-color: rgba(255,255,255,0.08);">
+                        <h3>Lifetime</h3>
+                        <div class="price"><span>$</span>30</div>
+                        <p class="billing-desc">One-time payment</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> One-time purchase</li>
+                            <li><i class="fas fa-check"></i> No recurring subscription fees</li>
+                            <li><i class="fas fa-check"></i> Lifetime software access &amp; updates</li>
+                            <li><i class="fas fa-check"></i> Unlimited narration &amp; OCR reading</li>
+                            <li><i class="fas fa-check"></i> All current &amp; future agent voices</li>
+                            <li><i class="fas fa-check"></i> Premium VIP priority support</li>
+                        </ul>
+                        <a href="/download" class="btn-val-neutral pricing-btn">Download Free Client</a>
+                        <div style="font-size: 0.775rem; color: rgba(255,255,255,0.5); text-align: center; margin-top: 10px;">
+                            One-time purchase option coming soon
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Comparison Table -->
+        <section style="padding: 40px 0 60px;">
+            <div class="container" style="max-width: 1020px;">
+                <div class="section-title" style="text-align: center; margin-bottom: 2.5rem;">
+                    <h2 style="font-size: 2rem; color: #fff; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">Plan Feature Comparison</h2>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Detailed side-by-side comparison of every plan capability</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem; overflow-x: auto;">
+                    <table style="width: 100%; min-width: 620px; border-collapse: collapse; color: rgba(255,255,255,0.85); font-size: 0.95rem;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid rgba(255,255,255,0.1); text-align: left;">
+                                <th style="padding: 1rem 0.75rem; color: #fff; font-size: 1.05rem; width: 40%;">Feature</th>
+                                <th style="padding: 1rem 0.75rem; color: #fff; font-size: 1.05rem; width: 20%; text-align: center;">Free</th>
+                                <th style="padding: 1rem 0.75rem; color: #ff4655; font-size: 1.05rem; width: 20%; text-align: center;">Pro</th>
+                                <th style="padding: 1rem 0.75rem; color: #fff; font-size: 1.05rem; width: 20%; text-align: center;">Lifetime</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 0.9rem 0.75rem; font-weight: 500;">Real-Time Screen OCR Chat Reading</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;"><i class="fas fa-check"></i> Included</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;"><i class="fas fa-check"></i> Included</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;"><i class="fas fa-check"></i> Included</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 0.9rem 0.75rem; font-weight: 500;">100% Local PC Processing (RAM Volatile)</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;"><i class="fas fa-check"></i> Yes</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;"><i class="fas fa-check"></i> Yes</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;"><i class="fas fa-check"></i> Yes</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 0.9rem 0.75rem; font-weight: 500;">Virtual Audio Cable Routing (VB-CABLE)</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;"><i class="fas fa-check"></i> Yes</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;"><i class="fas fa-check"></i> Yes</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;"><i class="fas fa-check"></i> Yes</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 0.9rem 0.75rem; font-weight: 500;">Narration Message Volume</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: rgba(255,255,255,0.6);">Limited Weekly</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e; font-weight: 600;">Unlimited</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e; font-weight: 600;">Unlimited</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 0.9rem 0.75rem; font-weight: 500;">AI Agent Voice Library</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: rgba(255,255,255,0.6);">Trial Voices</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e; font-weight: 600;">Full 30+ Voices</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e; font-weight: 600;">All Current &amp; Future</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 0.9rem 0.75rem; font-weight: 500;">Profile Avatars</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: rgba(255,255,255,0.6);">Basic</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;">Expanded Pack</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;">All Unlocked</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 0.9rem 0.75rem; font-weight: 500;">Software Updates</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: rgba(255,255,255,0.6);">Standard</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;">Active Subscription</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e; font-weight: 600;">Lifetime Updates</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 0.9rem 0.75rem; font-weight: 500;">Customer Support</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: rgba(255,255,255,0.6);">Community Discord</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e;">Priority Support</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; color: #22c55e; font-weight: 600;">VIP Direct Support</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0.9rem 0.75rem; font-weight: 600; color: #fff;">Pricing / Billing Term</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; font-weight: 700; color: #fff;">$0 Free</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; font-weight: 700; color: #ff4655;">$1.25/mo or $3/mo</td>
+                                <td style="padding: 0.9rem 0.75rem; text-align: center; font-weight: 700; color: #fff;">$30 One-Time</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Compliance Highlights -->
+        <section style="padding: 30px 0 60px;">
+            <div class="container" style="max-width: 1020px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem;">
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.75rem;">
+                        <div style="font-size: 1.8rem; color: #ff4655; margin-bottom: 0.75rem;">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">Anti-Cheat Safe</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                            ValVoice uses external, non-invasive screen OCR and local audio piping. It never touches Valorant game binaries or injects memory.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.75rem;">
+                        <div style="font-size: 1.8rem; color: #ff4655; margin-bottom: 0.75rem;">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">100% Local Processing</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                            Chat OCR recognition and text-to-speech audio synthesis occur entirely on your PC. No chat messages or audio streams are uploaded to servers.
+                        </p>
+                    </div>
+
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.75rem;">
+                        <div style="font-size: 1.8rem; color: #ff4655; margin-bottom: 0.75rem;">
+                            <i class="fas fa-undo-alt"></i>
+                        </div>
+                        <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">14-Day Refund Policy</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6;">
+                            Transparent billing backed by our Merchant of Record, Paddle. Read our full <a href="/refund-policy.html" style="color: #ff4655;">Refund &amp; Cancellation Policy</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing FAQ Section -->
+        <section class="faq" style="padding: 20px 0 70px;">
+            <div class="container" style="max-width: 900px;">
+                <div class="section-title" style="text-align: center; margin-bottom: 2rem;">
+                    <h2 style="font-size: 2rem; color: #fff; font-family: 'Outfit', sans-serif;">Pricing Questions &amp; Answers</h2>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Common questions about ValVoice plans, billing, and access</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I use ValVoice for free?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! You can download ValVoice directly from our <a href="/download.html" style="color: #ff4655;">Download page</a> and use core text-to-speech chat conversion. The Free plan includes core OCR and sample agent voices with a weekly message limit.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How does the Pro yearly billing discount work?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The Pro Yearly plan costs $15 per year, which equates to just $1.25 per month. That represents a 58% savings compared to paying the $3 monthly rate on an ongoing basis.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Is the Lifetime plan truly a one-time purchase?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes. The Lifetime plan is a single $30 one-time payment. There are no recurring fees or automatic renewals, and you receive permanent access to ValVoice along with future updates and new agent voices.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How will paid commercial checkout work?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>ValVoice is currently available for free evaluation while commercial checkout is being integrated. When paid checkout goes live, transactions will be fulfilled safely through <strong>Paddle</strong>, our authorized Merchant of Record, supporting major credit cards, PayPal, Apple Pay, and local currencies.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I cancel my subscription at any time?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes. If you subscribe to Pro, you can cancel renewal anytime through your Paddle billing portal or by contacting our support team. Your Pro benefits remain active until the end of your prepaid billing period.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta" id="download" style="padding: 70px 0;">
+            <div class="container">
+                <div class="cta-content" style="text-align: center; max-width: 700px; margin: 0 auto;">
+                    <h2 style="font-size: 2.25rem; font-weight: 800; color: #fff; margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">
+                        Ready to Enhance Your Gameplay?
+                    </h2>
+                    <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">
+                        Download ValVoice today for Windows and experience hands-free real-time chat communication.
+                    </p>
+                    <div class="hero-btns" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                        <a href="/download" class="btn btn-primary btn-lg" style="text-decoration: none;">Download Now</a>
+                        <a href="/faq.html" class="btn-val-neutral" style="padding: 12px 28px; border-radius: 8px; font-weight: 600; text-decoration: none;">Read FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="/logo.png" alt="ValVoice Logo" class="custom-logo">
+                        <span>ValVoice</span>
+                    </div>
+                    <p>Transform your Valorant experience with real-time text-to-voice conversion for in-game chat.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://discord.gg/HdSnWzYkP" target="_blank" rel="noopener noreferrer" aria-label="Join our Discord"><i class="fab fa-discord"></i></a>
+                        <a href="mailto:valorantvoiceofficials@gmail.com" title="Email Us" aria-label="Email ValVoice Support"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="/about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="/#features"><i class="fas fa-chevron-right"></i> Features</a></li>
+                        <li><a href="/#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="/pricing.html"><i class="fas fa-chevron-right"></i> Pricing</a></li>
+                        <li><a href="/download"><i class="fas fa-chevron-right"></i> Download</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/privacy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="/terms.html"><i class="fas fa-chevron-right"></i> Terms &amp; Conditions</a></li>
+                        <li><a href="/refund-policy.html"><i class="fas fa-chevron-right"></i> Refund &amp; Cancellation Policy</a></li>
+                        <li><a href="/cookie-policy.html"><i class="fas fa-chevron-right"></i> Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="/faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="/docs/index.html"><i class="fas fa-chevron-right"></i> Documentation</a></li>
+                        <li><a href="https://discord.gg/HdSnWzYkP" target="_blank" rel="noopener noreferrer"><i class="fas fa-chevron-right"></i> Discord Server</a></li>
+                        <li><a href="mailto:valorantvoiceofficials@gmail.com"><i class="fas fa-chevron-right"></i> Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2026 ValVoice. All rights reserved. This site is not affiliated with Riot Games or Valorant.
+            </div>
+            <div class="peerpush-badge" style="text-align: center; margin-top: 15px;">
+                <a href="https://peerpush.net/p/valvoice" target="_blank" rel="noopener noreferrer" style="color: #64748b; font-size: 0.8rem; text-decoration: none;">
+                  ValVoice on PeerPush
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+
+    <script>
+        function setBilling(plan) {
+            const monthlyBtn = document.getElementById('toggle-monthly');
+            const yearlyBtn = document.getElementById('toggle-yearly');
+            const priceEl = document.getElementById('pro-price');
+            const billingEl = document.getElementById('pro-billing');
+            const savingsEl = document.getElementById('pro-savings');
+            const ctaEl = document.getElementById('pro-cta');
+            const badge = document.getElementById('pro-badge');
+
+            if (plan === 'monthly') {
+                monthlyBtn.classList.add('active');
+                monthlyBtn.setAttribute('aria-checked', 'true');
+                yearlyBtn.classList.remove('active');
+                yearlyBtn.setAttribute('aria-checked', 'false');
+                
+                priceEl.innerHTML = '<span>$</span>3<span>/month</span>';
+                billingEl.textContent = 'billed monthly';
+                if (savingsEl) savingsEl.style.display = 'none';
+                if (badge) badge.style.display = 'none';
+                
+                const supportItem = document.getElementById('pro-support-item');
+                if (supportItem) supportItem.innerHTML = '<i class="fas fa-check"></i> Priority support';
+            } else {
+                yearlyBtn.classList.add('active');
+                yearlyBtn.setAttribute('aria-checked', 'true');
+                monthlyBtn.classList.remove('active');
+                monthlyBtn.setAttribute('aria-checked', 'false');
+                
+                priceEl.innerHTML = '<span>$</span>15<span>/year</span>';
+                billingEl.textContent = 'billed annually';
+                if (savingsEl) savingsEl.style.display = 'block';
+                if (badge) badge.style.display = 'block';
+                
+                const supportItem = document.getElementById('pro-support-item');
+                if (supportItem) supportItem.innerHTML = '<i class="fas fa-check"></i> Priority support';
+            }
+        }
+
+        const toggleMonthly = document.getElementById('toggle-monthly');
+        const toggleYearly = document.getElementById('toggle-yearly');
+
+        if (toggleMonthly && toggleYearly) {
+            toggleMonthly.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    setBilling('yearly');
+                    toggleYearly.focus();
+                }
+            });
+
+            toggleYearly.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    setBilling('monthly');
+                    toggleMonthly.focus();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -4,14 +4,10 @@
       "source": "/download",
       "destination": "https://github.com/ValoVoice/ValVoice-Releases/releases/latest/download/ValVoice-Setup.exe",
       "permanent": false
-    },
-    {
-      "source": "/pricing",
-      "destination": "/#pricing",
-      "permanent": false
     }
   ],
   "rewrites": [
+    { "source": "/pricing", "destination": "/pricing.html" },
     { "source": "/terms", "destination": "/terms.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/refund-policy", "destination": "/refund-policy.html" },
