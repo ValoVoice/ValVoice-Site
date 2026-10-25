@@ -62,38 +62,94 @@
     <p style="color: rgba(255,255,255,0.6); margin-bottom: 2rem;">Last Updated: October 2026</p>
     
     <div class="legal-content" style="color: rgba(255,255,255,0.85); line-height: 1.8; font-size: 1.05rem;">
-        
         <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">1. Core Privacy Principle: Local Processing</h2>
-        <p style="margin-bottom: 1rem;">ValVoice is built with a privacy-first, local-processing architecture. The primary functions of the software - recognizing text on your screen and synthesizing speech - occur entirely on your local machine.</p>
-        <p style="margin-bottom: 1rem;">ValVoice utilizes local OCR (Optical Character Recognition), local TTS processing, Pocket TTS, Windows SAPI, local audio processing, and local virtual audio routing (such as VB-CABLE).</p>
+        <p style="margin-bottom: 1rem;">ValVoice (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is operated by an independent software developer under the public brand <strong>ValVoice</strong>. ValVoice is built with a privacy-first, local-processing architecture. The primary functions of the desktop software &mdash; recognizing text on your screen and synthesizing speech &mdash; occur entirely on your local machine.</p>
+        <p style="margin-bottom: 1rem;">ValVoice utilizes local OCR (Optical Character Recognition), local TTS processing, Pocket TTS, Windows SAPI, local audio processing, and local virtual audio routing (such as VB-CABLE). Your audio streams and recognized text stay on your device.</p>
 
         <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">2. What We Do Not Collect</h2>
-        <p style="margin-bottom: 1rem;">To ensure your security and privacy, ValVoice <strong>does not</strong> collect, retain, or upload any of the following data to our servers or any third-party cloud service:</p>
+        <p style="margin-bottom: 1rem;">To ensure your privacy and security, ValVoice <strong>does not</strong> collect, retain, or upload any of the following data to our servers or any third-party cloud service:</p>
         <ul style="margin-bottom: 1rem; margin-left: 2rem;">
             <li style="margin-bottom: 0.5rem;">VALORANT in-game chat messages</li>
             <li style="margin-bottom: 0.5rem;">OCR text output or transcription results</li>
             <li style="margin-bottom: 0.5rem;">Generated TTS audio files or voice streams</li>
             <li style="margin-bottom: 0.5rem;">Microphone recordings or voice communications</li>
-            <li style="margin-bottom: 0.5rem;">Riot Games credentials or passwords</li>
+            <li style="margin-bottom: 0.5rem;">Riot Games credentials, usernames, or passwords</li>
             <li style="margin-bottom: 0.5rem;">Riot Player UUIDs (PUUID)</li>
-            <li style="margin-bottom: 0.5rem;">Gameplay data or statistics</li>
+            <li style="margin-bottom: 0.5rem;">Gameplay telemetry, match statistics, or player habits</li>
         </ul>
 
         <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">3. Screen Capture and OCR</h2>
-        <p style="margin-bottom: 1rem;">ValVoice processes the required screen region locally for OCR and does not retain or transmit screenshots, screen recordings, or desktop imagery to ValVoice or third-party cloud services.</p>
+        <p style="margin-bottom: 1rem;">ValVoice inspects only the user-designated screen region locally in volatile system memory (RAM) for optical character recognition. ValVoice does not retain, archive, record, or transmit screenshots, video recordings, or desktop imagery to ValVoice or any third-party service.</p>
 
-        <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">4. Limited Network Connections</h2>
-        <p style="margin-bottom: 1rem;">While the core processing is local, ValVoice makes limited outbound network connections for essential software maintenance and diagnostics:</p>
+        <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">4. Application Network Connections</h2>
+        <p style="margin-bottom: 1rem;">While all core processing is strictly local, the ValVoice desktop application establishes limited outbound network connections for essential software maintenance, updates, and stability diagnostics:</p>
         <ul style="margin-bottom: 1rem; margin-left: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>GitHub:</strong> ValVoice connects to GitHub repositories to check for software updates and to download official release packages.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>PostHog:</strong> ValVoice uses PostHog for installation-scoped, pseudonymous telemetry and product diagnostics. This helps us understand crash reports, feature usage rates, and software stability. This telemetry does not contain the contents of your gameplay or screen.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>GitHub Releases:</strong> ValVoice connects to official GitHub repository endpoints (e.g., release APIs) to verify whether software updates are available and to download update packages. These standard outbound HTTPS requests transmit basic network metadata (such as IP address and user agent) to GitHub; no user-specific profile or game data is transmitted.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>PostHog Telemetry:</strong> ValVoice uses PostHog to collect installation-scoped, pseudonymous diagnostic events and application telemetry. This diagnostic telemetry includes crash traces, application version numbers, operating system versions, and feature execution stability metrics to help us fix errors and improve stability. This telemetry does not contain game chat text, screen images, or personal identifying information.</li>
         </ul>
 
-        <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">5. Cookies and Similar Technologies</h2>
-        <p style="margin-bottom: 1rem;">ValVoice does not intentionally use cookies for advertising or cross-site tracking. Essential technologies may be used where necessary to operate the website, maintain security, or support requested functionality. If our use of cookies or similar technologies changes, we will update this notice accordingly.</p>
+        <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">5. Payment Processing and Commercial Transactions (Paddle Merchant of Record)</h2>
+        <p style="margin-bottom: 1rem;"><strong>Current Status &amp; Integration:</strong> The ValVoice desktop utility is currently available for evaluation and free use. Online commercial checkout for paid subscription and lifetime plans is currently being configured and onboarded. When commercial checkout is enabled on this website, commercial transactions will be fulfilled as described below.</p>
+        <p style="margin-bottom: 1rem;"><strong>Paddle as Merchant of Record:</strong> Commercial payments, subscriptions, invoicing, and tax handling for paid ValVoice plans are processed by our authorized online reseller and Merchant of Record, <strong>Paddle</strong> (Paddle.com Market Limited / Paddle Payments Ltd). Under applicable data protection laws (including the EU GDPR and UK GDPR), Paddle acts as an <strong>independent Data Controller</strong> for the personal and financial information collected during checkout.</p>
+        <p style="margin-bottom: 1rem;"><strong>Data Collected Directly by Paddle:</strong> When you purchase a ValVoice plan through the checkout interface, Paddle collects and processes your personal and transaction data, including:</p>
+        <ul style="margin-bottom: 1rem; margin-left: 2rem;">
+            <li style="margin-bottom: 0.5rem;">Full name and email address</li>
+            <li style="margin-bottom: 0.5rem;">Billing address, postal code, and country</li>
+            <li style="margin-bottom: 0.5rem;">IP address and browser checkout metadata</li>
+            <li style="margin-bottom: 0.5rem;">Payment method details (such as credit card tokenization or alternative payment data)</li>
+        </ul>
+        <p style="margin-bottom: 1rem;">Paddle processes this information in accordance with the <a href="https://www.paddle.com/legal/privacy" target="_blank" rel="noopener noreferrer" style="color: #ff4655;">Paddle Privacy Notice</a> and the <a href="https://www.paddle.com/legal/buyer-terms" target="_blank" rel="noopener noreferrer" style="color: #ff4655;">Paddle Buyer Terms</a> for fraud prevention, payment processing, tax compliance (VAT/sales tax), and order fulfillment.</p>
+        <p style="margin-bottom: 1rem;"><strong>Card Data Limitation:</strong> ValVoice <strong>never receives, processes, or stores</strong> complete credit or debit card numbers, card verification codes (CVV/CVC), or banking passwords. All sensitive payment details are entered directly into Paddle&rsquo;s secure, PCI-DSS compliant checkout interface.</p>
+        <p style="margin-bottom: 1rem;"><strong>Data Shared by Paddle with ValVoice:</strong> Following a transaction, Paddle shares limited order confirmation details with ValVoice, consisting of:</p>
+        <ul style="margin-bottom: 1rem; margin-left: 2rem;">
+            <li style="margin-bottom: 0.5rem;">Order reference ID and transaction status (e.g., active, past due, canceled)</li>
+            <li style="margin-bottom: 0.5rem;">Purchased plan tier (Monthly, Annual, or Lifetime)</li>
+            <li style="margin-bottom: 0.5rem;">Customer email address associated with the order</li>
+            <li style="margin-bottom: 0.5rem;">Transaction date, renewal date, and country (for localized tax and support purposes)</li>
+        </ul>
+        <p style="margin-bottom: 1rem;">We use this shared metadata solely to manage digital software entitlements, verify active paid plan status, and provide customer support.</p>
+        <p style="margin-bottom: 1rem;"><strong>Buyer Support and Transaction Management:</strong> Buyers can review transactions, manage active recurring subscriptions, update payment methods, or request VAT invoices at any time via <a href="https://paddle.net" target="_blank" rel="noopener noreferrer" style="color: #ff4655;">paddle.net</a> or by contacting Paddle support.</p>
 
-        <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">6. Contact Information</h2>
-        <p style="margin-bottom: 1rem;">If you have any questions about this Privacy Policy or our data practices, please contact us at <a href="mailto:valorantvoiceofficials@gmail.com" style="color: #ff4655;">valorantvoiceofficials@gmail.com</a>.</p>
+        <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">6. Website Technologies, Cookies, and Local Storage</h2>
+        <p style="margin-bottom: 1rem;">The ValVoice website (valvoice.vercel.app) is hosted on Vercel. Standard technical server logs (such as requesting IP address, user agent, and requested page URL) are generated to ensure network security, maintain system reliability, and protect against distributed denial-of-service (DDoS) incidents.</p>
+        <p style="margin-bottom: 1rem;">ValVoice does not place third-party marketing cookies, tracking pixels, or cross-site profiling scripts on your device. Any browser-level storage (such as local storage or session cache) is utilized strictly for basic website functionality and user preferences (such as remembering your cookie notice acknowledgment or pricing toggle preference). For additional details, please see our <a href="/cookie-policy.html" style="color: #ff4655;">Cookie Policy</a>.</p>
+
+        <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">7. Data Retention and Deletion</h2>
+        <p style="margin-bottom: 1rem;">We retain personal and technical data only as long as necessary to fulfill the purposes described in this policy:</p>
+        <ul style="margin-bottom: 1rem; margin-left: 2rem;">
+            <li style="margin-bottom: 0.5rem;"><strong>Local Application Configuration:</strong> User preferences and local settings remain on your local drive until you delete the application or clear your configuration files.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Customer Support Inquiries:</strong> Communications sent to our support email are retained only as long as required to assist you and maintain a reasonable record of correspondence.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Diagnostic Telemetry:</strong> Pseudonymous diagnostic records within PostHog are retained according to technical diagnostic utility to monitor application stability over time.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Commercial Records:</strong> Paddle retains transaction, billing, and tax records in accordance with statutory accounting and tax compliance laws. ValVoice maintains order reference metadata only for active license entitlement and support verification.</li>
+        </ul>
+
+        <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">8. International Data Transfers</h2>
+        <p style="margin-bottom: 1rem;">ValVoice and its service providers operate globally. Technical infrastructure and third-party services utilized by ValVoice &mdash; including Vercel (edge hosting), GitHub (updates), PostHog (diagnostics), and Paddle (Merchant of Record and payments) &mdash; may process data on servers located in the United States, the European Union, the United Kingdom, and other jurisdictions.</p>
+        <p style="margin-bottom: 1rem;">Where cross-border data transfers occur, appropriate legal safeguards and transfer mechanisms (such as Standard Contractual Clauses approved by the European Commission or equivalent UK/international frameworks) are implemented by our service providers to protect your information.</p>
+
+        <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">9. Your Privacy Rights</h2>
+        <p style="margin-bottom: 1rem;">Depending on your jurisdiction (including under the EU/UK GDPR, California CCPA/CPRA, and India&rsquo;s Digital Personal Data Protection Act), you have statutory rights regarding your personal information, which may include:</p>
+        <ul style="margin-bottom: 1rem; margin-left: 2rem;">
+            <li style="margin-bottom: 0.5rem;"><strong>Right of Access:</strong> The right to request confirmation of whether we hold personal data concerning you and to receive a copy of that data.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Right to Rectification:</strong> The right to request correction of inaccurate or incomplete personal information.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Right to Erasure:</strong> The right to request deletion of your personal data, subject to necessary legal, financial, or contractual obligations.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Right to Restrict or Object:</strong> The right to object to or request restrictions on certain processing activities.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Right to Withdraw Consent:</strong> Where processing is founded on your consent, you may withdraw your consent at any time.</li>
+        </ul>
+        <p style="margin-bottom: 1rem;">To exercise any privacy rights regarding ValVoice records, please email us at <a href="mailto:valorantvoiceofficials@gmail.com" style="color: #ff4655;">valorantvoiceofficials@gmail.com</a>. For rights regarding billing, checkout, or transaction data held by Paddle in its capacity as an independent Data Controller, you may contact Paddle at <a href="mailto:privacy@paddle.com" style="color: #ff4655;">privacy@paddle.com</a> or visit <a href="https://paddle.net" target="_blank" rel="noopener noreferrer" style="color: #ff4655;">paddle.net</a>.</p>
+
+        <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">10. Security Practices</h2>
+        <p style="margin-bottom: 1rem;">We implement reasonable technical and organizational measures to safeguard your personal data. By design, our architecture relies on local-first processing, ensuring that sensitive gameplay and communication data never leaves your system. All external network interactions (including GitHub updates, diagnostic telemetry, and future Paddle checkout sessions) utilize encrypted HTTPS connections (TLS). However, no internet transmission or electronic storage method is completely impenetrable, and we cannot guarantee absolute security.</p>
+
+        <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">11. Changes to This Privacy Policy</h2>
+        <p style="margin-bottom: 1rem;">We may update this Privacy Policy from time to time to reflect operational, legal, or regulatory modifications. When updates are published, the &ldquo;Last Updated&rdquo; date at the top of this document will be revised. We encourage you to review this policy periodically to stay informed about our data practices.</p>
+
+        <h2 style="color: #fff; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem;">12. Contact Information</h2>
+        <p style="margin-bottom: 1rem;">If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:</p>
+        <ul style="margin-bottom: 1rem; margin-left: 2rem;">
+            <li style="margin-bottom: 0.5rem;"><strong>ValVoice Support &amp; Privacy:</strong> <a href="mailto:valorantvoiceofficials@gmail.com" style="color: #ff4655;">valorantvoiceofficials@gmail.com</a></li>
+            <li style="margin-bottom: 0.5rem;"><strong>Paddle Merchant of Record &amp; Billing Inquiries:</strong> <a href="mailto:privacy@paddle.com" style="color: #ff4655;">privacy@paddle.com</a> or visit <a href="https://paddle.net" target="_blank" rel="noopener noreferrer" style="color: #ff4655;">paddle.net</a></li>
+        </ul>
     </div>
 </div>
 </main>
