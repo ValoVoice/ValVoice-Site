@@ -21,7 +21,7 @@
     <meta property="twitter:image" content="https://valvoice.vercel.app/og-image.jpg">
 
     <link rel="canonical" href="https://valvoice.vercel.app/download.html">
-    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/png" href="/logo.png">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -72,14 +72,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="logo.png" alt="ValVoice Logo" class="custom-logo">
+                <img src="/logo.png" alt="ValVoice Logo" class="custom-logo">
                 <div class="site-name">VALVOICE</div>
             </div>
             
@@ -100,67 +100,112 @@
         </div>
     </header>
 <main>
-<div class="container" style="padding-top: 120px; padding-bottom: 80px; min-height: 80vh;">
-    <h1 style="font-size: 3rem; margin-bottom: 1rem; color: #fff;">Download ValVoice</h1>
+<div class="container" style="padding-top: 120px; padding-bottom: 80px; min-height: 80vh; max-width: 950px; margin: 0 auto;">
+    <h1 style="font-size: 3rem; margin-bottom: 0.5rem; color: #fff;">Download ValVoice</h1>
+    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.7); margin-bottom: 2.5rem;">Windows desktop utility for real-time text-to-voice conversion in Valorant.</p>
     
-    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 2rem; margin-bottom: 3rem;">
-        <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #fff;">What is ValVoice?</h2>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">ValVoice is a Windows desktop application that converts Valorant in-game text chat into spoken voice. It uses screen OCR to recognize chat text and local text-to-speech to turn that text into audio.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; line-height: 1.6;">ValVoice is designed specifically for Valorant players who want to hear in-game text chat as spoken audio rather than relying entirely on reading the chat manually.</p>
+    <!-- Primary Download Box -->
+    <div style="background: linear-gradient(135deg, rgba(255,70,85,0.08) 0%, rgba(15,25,35,0.6) 100%); border: 1px solid rgba(255,70,85,0.3); border-radius: 12px; padding: 2.5rem; margin-bottom: 3rem; text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+        <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: #fff;">Get ValVoice for Windows</h2>
+        <p style="font-size: 1.05rem; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">Version 1.2.7 &bull; Free Evaluation Download &bull; Official Windows Installer</p>
         
-        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: #ff4655;">Key Takeaways</h3>
-        <ul style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6; margin-left: 1.5rem;">
-            <li>ValVoice runs as a Windows desktop application.</li>
-            <li>It reads Valorant text chat using screen OCR.</li>
-            <li>Recognized text is converted into spoken audio using local text-to-speech.</li>
-            <li>Audio routing can be configured using a virtual audio device such as VB-CABLE.</li>
-        </ul>
+        <a href="/download" class="btn-val-primary" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 1.1rem 2.8rem; font-size: 1.15rem; font-weight: 700; text-decoration: none; border-radius: 6px;">
+            <i class="fab fa-windows"></i> DOWNLOAD FOR WINDOWS (v1.2.7)
+        </a>
+        
+        <div style="margin-top: 1.25rem; font-size: 0.95rem; color: rgba(255,255,255,0.65);">
+            <span>File: <code>ValVoice-Setup.exe</code> (~2.6 MB)</span> &bull; 
+            <span>Operating System: Windows 10 &amp; 11 (64-bit)</span>
+        </div>
+        <p style="margin-top: 0.75rem; color: rgba(255,255,255,0.5); font-size: 0.85rem;">
+            By downloading, you agree to our <a href="/terms.html" style="color: #ff4655;">Terms &amp; Conditions</a> and <a href="/privacy.html" style="color: #ff4655;">Privacy Policy</a>.
+        </p>
     </div>
 
-    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 2rem; margin-bottom: 3rem;">
-        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #ff4655;">Product Specifications</h2>
-        <table style="width: 100%; border-collapse: collapse; color: rgba(255,255,255,0.9); font-size: 1.1rem;">
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                <td style="padding: 1rem 0; font-weight: 600; width: 30%;">Product</td>
-                <td style="padding: 1rem 0;">ValVoice</td>
+    <!-- What is ValVoice Card -->
+    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 2rem; margin-bottom: 2.5rem;">
+        <h2 style="font-size: 1.6rem; margin-bottom: 1rem; color: #fff;">What is ValVoice?</h2>
+        <p style="font-size: 1.05rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.7;">ValVoice is an independent Windows desktop application that converts in-game VALORANT text chat into spoken voice communication in real time. It uses local screen OCR (Optical Character Recognition) to detect visible text messages and synthesizes voice audio locally on your PC, routing it into your team's voice chat via a virtual audio cable.</p>
+        <p style="font-size: 1.05rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.7;">ValVoice operates completely non-invasively without injecting code or modifying game memory, protecting player account safety.</p>
+    </div>
+
+    <!-- Quick Installation Guide Card -->
+    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 2rem; margin-bottom: 2.5rem;">
+        <h2 style="font-size: 1.6rem; margin-bottom: 1.25rem; color: #ff4655;">Quick Installation Guide (4 Steps)</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 1rem;">
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 1.25rem;">
+                <div style="font-size: 1.2rem; font-weight: 700; color: #ff4655; margin-bottom: 0.5rem;">Step 1: Download</div>
+                <p style="font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.5;">Download and run <code>ValVoice-Setup.exe</code> to install the desktop client on your Windows PC.</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 1.25rem;">
+                <div style="font-size: 1.2rem; font-weight: 700; color: #ff4655; margin-bottom: 0.5rem;">Step 2: VB-CABLE</div>
+                <p style="font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.5;">Download and install the free <a href="/docs/vb-cable-setup.html" style="color: #ff4655;">VB-CABLE Driver</a> as Administrator, then restart your PC.</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 1.25rem;">
+                <div style="font-size: 1.2rem; font-weight: 700; color: #ff4655; margin-bottom: 0.5rem;">Step 3: Launch App</div>
+                <p style="font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.5;">Launch ValVoice and verify that audio output is routed to <strong>CABLE Input</strong>.</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 1.25rem;">
+                <div style="font-size: 1.2rem; font-weight: 700; color: #ff4655; margin-bottom: 0.5rem;">Step 4: Game Audio</div>
+                <p style="font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.5;">In Valorant Settings &rarr; Audio &rarr; Voice Chat, set Input Device to <strong>CABLE Output</strong>.</p>
+            </div>
+        </div>
+        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.6); margin-top: 1rem;">
+            Need in-depth instructions? Read our comprehensive <a href="/docs/installation.html" style="color: #ff4655;">Installation Walkthrough</a> or <a href="/docs/valorant-audio-settings.html" style="color: #ff4655;">Valorant Audio Settings Guide</a>.
+        </p>
+    </div>
+
+    <!-- System Requirements & Specs Card -->
+    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 2rem; margin-bottom: 2.5rem;">
+        <h2 style="font-size: 1.6rem; margin-bottom: 1.25rem; color: #ff4655;">System Requirements &amp; Technical Specifications</h2>
+        <table style="width: 100%; border-collapse: collapse; color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.6;">
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 0.85rem 0; font-weight: 600; width: 32%;">Operating System</td>
+                <td style="padding: 0.85rem 0;">Windows 10 or Windows 11 (64-bit required)</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                <td style="padding: 1rem 0; font-weight: 600;">Type</td>
-                <td style="padding: 1rem 0;">Windows desktop application</td>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 0.85rem 0; font-weight: 600;">Hardware Minimum</td>
+                <td style="padding: 0.85rem 0;">64-bit Multi-Core Processor, 4 GB RAM (8 GB recommended for local TTS models)</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                <td style="padding: 1rem 0; font-weight: 600;">Purpose</td>
-                <td style="padding: 1rem 0;">ValVoice converts Valorant in-game text chat into spoken voice.</td>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 0.85rem 0; font-weight: 600;">Display &amp; Game Mode</td>
+                <td style="padding: 0.85rem 0;">Standard 16:9 aspect ratio recommended; Valorant running in Fullscreen or Windowed Fullscreen with visible chat</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                <td style="padding: 1rem 0; font-weight: 600;">Input</td>
-                <td style="padding: 1rem 0;">The application reads visible in-game text chat using screen OCR.</td>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 0.85rem 0; font-weight: 600;">Virtual Audio Driver</td>
+                <td style="padding: 0.85rem 0;">Free <a href="/docs/vb-cable-setup.html" style="color: #ff4655;">VB-CABLE Driver</a> by VB-Audio required for routing audio into Valorant voice comms</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                <td style="padding: 1rem 0; font-weight: 600;">Processing</td>
-                <td style="padding: 1rem 0;">The recognized text is converted into speech using local text-to-speech.</td>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 0.85rem 0; font-weight: 600;">Latest Version</td>
+                <td style="padding: 0.85rem 0;">v1.2.7 (Release package: <code>ValVoice-Setup.exe</code>)</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                <td style="padding: 1rem 0; font-weight: 600;">Audio Routing</td>
-                <td style="padding: 1rem 0;">The generated speech can be routed through the configured virtual audio setup.</td>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 0.85rem 0; font-weight: 600;">Local Processing</td>
+                <td style="padding: 0.85rem 0;">Screen OCR recognition and speech synthesis execute strictly on your local PC (RAM volatile processing; no cloud chat uploads)</td>
             </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                <td style="padding: 1rem 0; font-weight: 600;">Voice Engine</td>
-                <td style="padding: 1rem 0;">ValVoice uses a local XTTS-based voice engine.</td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-                <td style="padding: 1rem 0; font-weight: 600;">Platform</td>
-                <td style="padding: 1rem 0;">Windows</td>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <td style="padding: 0.85rem 0; font-weight: 600;">Pricing &amp; Plans</td>
+                <td style="padding: 0.85rem 0;">Free evaluation download (Core features included; optional Pro &amp; Lifetime plans displayed on <a href="/#pricing" style="color: #ff4655;">pricing table</a>)</td>
             </tr>
             <tr>
-                <td style="padding: 1rem 0; font-weight: 600;">Price</td>
-                <td style="padding: 1rem 0;">Free</td>
+                <td style="padding: 0.85rem 0; font-weight: 600;">Non-Affiliation Notice</td>
+                <td style="padding: 0.85rem 0;">ValVoice is an independent utility and is not affiliated with, associated with, or endorsed by Riot Games or Valorant.</td>
             </tr>
         </table>
     </div>
 
-    <a href="#" class="btn-val-primary" style="display: inline-block;">DOWNLOAD FOR WINDOWS</a>
-    <p style="margin-top: 1rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">By downloading, you agree to our <a href="/terms.html" style="color: #ff4655;">Terms &amp; Conditions</a>.</p>
+    <!-- Documentation & Support Links Card -->
+    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+        <h2 style="font-size: 1.6rem; margin-bottom: 1rem; color: #fff;">Help &amp; Documentation</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+            <a href="/docs/installation.html" class="btn-val-neutral" style="padding: 0.6rem 1.25rem; font-size: 0.95rem; text-decoration: none;"><i class="fas fa-book" style="margin-right: 0.5rem;"></i> Installation Guide</a>
+            <a href="/docs/vb-cable-setup.html" class="btn-val-neutral" style="padding: 0.6rem 1.25rem; font-size: 0.95rem; text-decoration: none;"><i class="fas fa-sliders-h" style="margin-right: 0.5rem;"></i> VB-CABLE Setup</a>
+            <a href="/docs/valorant-audio-settings.html" class="btn-val-neutral" style="padding: 0.6rem 1.25rem; font-size: 0.95rem; text-decoration: none;"><i class="fas fa-volume-up" style="margin-right: 0.5rem;"></i> Valorant Audio Settings</a>
+            <a href="/docs/troubleshooting.html" class="btn-val-neutral" style="padding: 0.6rem 1.25rem; font-size: 0.95rem; text-decoration: none;"><i class="fas fa-wrench" style="margin-right: 0.5rem;"></i> Troubleshooting</a>
+            <a href="https://discord.gg/HdSnWzYkP" target="_blank" rel="noopener noreferrer" class="btn-val-neutral" style="padding: 0.6rem 1.25rem; font-size: 0.95rem; text-decoration: none;"><i class="fab fa-discord" style="margin-right: 0.5rem;"></i> Discord Community</a>
+            <a href="mailto:valorantvoiceofficials@gmail.com" class="btn-val-neutral" style="padding: 0.6rem 1.25rem; font-size: 0.95rem; text-decoration: none;"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> Email Support</a>
+        </div>
+    </div>
 </div>
 </main>
 
@@ -170,7 +215,7 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="logo.png" alt="ValVoice Logo" class="custom-logo">
+                        <img src="/logo.png" alt="ValVoice Logo" class="custom-logo">
                         <span>ValVoice</span>
                     </div>
                     <p>Transform your Valorant experience with real-time text-to-voice conversion for in-game chat.</p>
@@ -219,7 +264,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
 
