@@ -1,9 +1,26 @@
 {
-    "redirects":  [
-                      {
-                          "destination":  "https://github.com/ValoVoice/ValVoice-Releases/releases/download/v1.2.5/ValVoice-Setup.exe",
-                          "permanent":  false,
-                          "source":  "/download"
-                      }
-                  ]
+  "redirects": [
+    {
+      "source": "/download",
+      "destination": "https://github.com/ValoVoice/ValVoice-Releases/releases/download/v1.2.5/ValVoice-Setup.exe",
+      "permanent": false
+    },
+    {
+      "source": "/pricing",
+      "destination": "/#pricing",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/refund-policy", "destination": "/refund-policy.html" },
+    { "source": "/cookie-policy", "destination": "/cookie-policy.html" },
+    { "source": "/faq", "destination": "/faq.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/docs/installation", "destination": "/docs/installation.html" },
+    { "source": "/docs/troubleshooting", "destination": "/docs/troubleshooting.html" },
+    { "source": "/docs/valorant-audio-settings", "destination": "/docs/valorant-audio-settings.html" },
+    { "source": "/docs/vb-cable-setup", "destination": "/docs/vb-cable-setup.html" }
+  ]
 }
