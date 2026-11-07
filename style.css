@@ -1174,3 +1174,112 @@ a.clickable-step:hover {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.4);
 }
+
+
+/* ==========================================================================
+   FAQ Standalone Page (Always-Visible Cards)
+   ========================================================================== */
+
+.faq-page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.faq-page-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    font-family: var(--font-heading);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.faq-page-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.faq-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.faq-card {
+    background: rgba(15, 25, 35, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.75rem 2rem;
+    backdrop-filter: blur(10px);
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-card:hover {
+    border-color: rgba(255, 70, 85, 0.35);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.faq-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+}
+
+.faq-card-number {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--valorant-red);
+    background: rgba(255, 70, 85, 0.1);
+    border: 1px solid rgba(255, 70, 85, 0.25);
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+.faq-card-question {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.35;
+    margin: 0;
+}
+
+.faq-card-answer {
+    padding-left: 0;
+}
+
+.faq-card-answer p {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .faq-page-title {
+        font-size: 2.3rem;
+    }
+    .faq-page-subtitle {
+        font-size: 1.05rem;
+    }
+    .faq-card {
+        padding: 1.35rem 1.25rem;
+    }
+    .faq-card-header {
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    .faq-card-question {
+        font-size: 1.15rem;
+    }
+    .faq-card-answer p {
+        font-size: 0.98rem;
+    }
+}
