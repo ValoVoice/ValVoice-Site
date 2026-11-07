@@ -192,3 +192,73 @@ window.addEventListener('scroll', () => {
         backToTopBtn.style.visibility = 'hidden';
     }
 });
+
+// ==========================================================================
+// Support Email: Direct Webmail & Clipboard Fallback Functionality
+// ==========================================================================
+
+function copySupportEmail(e) {
+    const email = 'valorantvoiceofficials@gmail.com';
+    if (e && e.currentTarget && e.currentTarget.tagName === 'BUTTON') {
+        if (e.preventDefault) e.preventDefault();
+    }
+    
+    // Copy to clipboard with legacy fallback
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).catch(function() {
+            fallbackCopyText(email);
+        });
+    } else {
+        fallbackCopyText(email);
+    }
+    
+    showEmailToast('Email address copied to clipboard: ' + email);
+}
+
+function fallbackCopyText(text) {
+    const input = document.createElement('textarea');
+    input.value = text;
+    input.style.position = 'fixed';
+    input.style.left = '-9999px';
+    input.style.top = '0';
+    input.setAttribute('readonly', '');
+    document.body.appendChild(input);
+    input.select();
+    try {
+        document.execCommand('copy');
+    } catch (err) {
+        console.error('Fallback copy failed', err);
+    }
+    document.body.removeChild(input);
+}
+
+function showEmailToast(message) {
+    let toast = document.getElementById('email-toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'email-toast';
+        toast.className = 'email-toast';
+        document.body.appendChild(toast);
+    }
+    toast.innerHTML = '<i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i><span>' + message + '</span>';
+    toast.classList.add('show');
+    clearTimeout(toast._emailTimer);
+    toast._emailTimer = setTimeout(function() {
+        toast.classList.remove('show');
+    }, 4000);
+}
+
+window.copySupportEmail = copySupportEmail;
+
+function initSupportEmailHandlers() {
+    document.querySelectorAll('a[href*="valorantvoiceofficials%40gmail.com"], a[href*="valorantvoiceofficials@gmail.com"]').forEach(function(link) {
+        link.removeEventListener('click', copySupportEmail);
+        link.addEventListener('click', copySupportEmail);
+    });
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSupportEmailHandlers);
+} else {
+    initSupportEmailHandlers();
+}

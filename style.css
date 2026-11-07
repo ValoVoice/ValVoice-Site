@@ -1283,3 +1283,60 @@ a.clickable-step:hover {
         font-size: 0.98rem;
     }
 }
+
+
+/* ==========================================================================
+   Email Toast Notification (Fallback & Confirmation)
+   ========================================================================== */
+
+.email-toast {
+    position: fixed;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%) translateY(25px);
+    background: rgba(15, 25, 35, 0.96);
+    color: #ffffff;
+    border: 1px solid rgba(255, 70, 85, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 70, 85, 0.25);
+    border-radius: 8px;
+    padding: 13px 22px;
+    font-size: 0.95rem;
+    font-family: var(--font-primary, 'Inter', sans-serif);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    white-space: nowrap;
+}
+
+.email-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+}
+
+.email-toast i {
+    color: #10b981;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+    .email-toast {
+        left: 15px;
+        right: 15px;
+        transform: translateY(25px);
+        white-space: normal;
+        text-align: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        padding: 10px 14px;
+        bottom: 25px;
+    }
+    
+    .email-toast.show {
+        transform: translateY(0);
+    }
+}
