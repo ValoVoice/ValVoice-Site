@@ -58,41 +58,79 @@
         </div>
     </header>
 <main>
-<div class="container" style="padding-top: 120px; padding-bottom: 80px; min-height: 80vh;">
+<div class="container" style="padding-top: 120px; padding-bottom: 80px; min-height: 80vh; max-width: 900px; margin: 0 auto;">
     <h1 style="font-size: 3rem; margin-bottom: 2rem; color: #fff;">Frequently Asked Questions</h1>
     
-    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 2rem; margin-bottom: 3rem;">
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">What is ValVoice?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">ValVoice is a Windows desktop application that converts Valorant in-game text chat into spoken voice.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">It uses screen OCR to recognize chat text and local text-to-speech to turn that text into audio, helping players communicate without reading chat manually.</p>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">
+                What is ValVoice?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>ValVoice is a Windows application that turns Valorant in-game text messages into spoken voice. Instead of constantly reading the chat, you can listen to messages while playing and stay focused on the game.</p>
+            </div>
+        </div>
 
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">How does ValVoice convert Valorant text chat into voice?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">ValVoice reads visible Valorant text chat using screen OCR and converts the detected messages into speech.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">The speech is generated locally and can be piped into a virtual audio cable, which Valorant uses as its microphone input. Your teammates hear the AI voice in real time.</p>
+        <div class="faq-item">
+            <div class="faq-question">
+                How does ValVoice convert Valorant text chat into voice?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>ValVoice automatically detects messages appearing in your Valorant chat and reads them aloud using AI-powered voices. You can also send the generated voice into your team's voice chat so your teammates can hear it.</p>
+            </div>
+        </div>
 
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">Does ValVoice work on Windows?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">Yes, ValVoice is exclusively a Windows desktop application.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">Because Valorant is a Windows game, the software runs locally alongside the client.</p>
+        <div class="faq-item">
+            <div class="faq-question">
+                Does ValVoice work on Windows?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Yes! ValVoice is designed specifically for Windows PCs. Simply install the application, set it up, and use it alongside Valorant while you play.</p>
+            </div>
+        </div>
 
-        
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">What is screen OCR?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">Screen OCR (Optical Character Recognition) is a technology that recognizes text visible on the screen and extracts it into digital text.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">ValVoice uses this to safely read chat without touching the game files.</p>
+        <div class="faq-item">
+            <div class="faq-question">
+                What is Valorant text-to-voice?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Valorant text-to-voice means turning messages typed in the game's chat into spoken audio. With ValVoice, you can listen to chat messages instead of having to read them during a match.</p>
+            </div>
+        </div>
 
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">What is Valorant text-to-voice?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">Valorant text-to-voice refers to the process of instantly converting in-game text messages typed by players into spoken audio, allowing teammates to hear the chat rather than reading it.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">ValVoice performs this automatically during gameplay.</p>
-<h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">Does ValVoice read Valorant text chat using OCR?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">Yes, ValVoice strictly uses screen OCR to read chat.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">It does not inject into game files or memory, making it a safe external accessibility tool.</p>
+        <div class="faq-item">
+            <div class="faq-question">
+                Is ValVoice safe to use with Valorant?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>ValVoice is designed to work alongside Valorant without modifying its game files or injecting code into the game. It operates as a separate Windows application. However, it is not officially approved or endorsed by Riot Games.</p>
+            </div>
+        </div>
 
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">Is ValVoice safe to use with Valorant?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">Yes, ValVoice is safe to use as it relies entirely on local visual recognition.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">Because it does not modify the Valorant client or its memory space, it operates safely alongside Vanguard.</p>
+        <div class="faq-item">
+            <div class="faq-question">
+                How does ValVoice read chats?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>ValVoice automatically detects text messages appearing in your Valorant chat and turns them into spoken voice. It works in the background while you play, so you can focus on your game without constantly checking the chat.</p>
+            </div>
+        </div>
 
-        <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem;">What is VB-CABLE used for?</h3>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 1rem; line-height: 1.6;">VB-CABLE is a virtual audio device used to route ValVoice's speech output directly into Valorant's microphone input.</p>
-        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; line-height: 1.6;">It acts as a bridge, tricking the game into accepting the synthesized voice as your actual microphone.</p>
+        <div class="faq-item">
+            <div class="faq-question">
+                What is VB-CABLE used for?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>VB-CABLE is a free tool that helps ValVoice send its spoken messages into Valorant's voice chat. Think of it as a connection between ValVoice and your game's microphone input. You need to install and configure it to let your teammates hear the generated voices.</p>
+            </div>
+        </div>
     </div>
 </div>
 </main>
