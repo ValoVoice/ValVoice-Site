@@ -1,4 +1,11 @@
 {
+  "framework": null,
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs22.x",
+      "maxDuration": 30
+    }
+  },
   "redirects": [
     {
       "source": "/download",

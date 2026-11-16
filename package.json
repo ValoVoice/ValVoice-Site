@@ -1,0 +1,14 @@
+{
+  "name": "valvoice-site",
+  "version": "1.0.0",
+  "description": "ValVoice website and backend API (Vercel serverless)",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test tests/schema.test.js tests/phase2.test.js",
+    "test:schema": "node --test tests/schema.test.js",
+    "test:phase2": "node --test tests/phase2.test.js"
+  },
+  "private": true
+}

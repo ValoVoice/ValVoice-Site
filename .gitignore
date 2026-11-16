@@ -1,0 +1,22 @@
+# Environment & local secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Dependencies & build
+node_modules/
+.vercel/
+supabase/.temp/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
