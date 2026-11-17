@@ -1,0 +1,5 @@
+supabase/
+tests/
+*.py
+README.md
+AGENTS.md

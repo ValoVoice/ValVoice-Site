@@ -23,6 +23,7 @@
     { "source": "/docs/installation", "destination": "/docs/installation.html" },
     { "source": "/docs/troubleshooting", "destination": "/docs/troubleshooting.html" },
     { "source": "/docs/valorant-audio-settings", "destination": "/docs/valorant-audio-settings.html" },
-    { "source": "/docs/vb-cable-setup", "destination": "/docs/vb-cable-setup.html" }
+    { "source": "/docs/vb-cable-setup", "destination": "/docs/vb-cable-setup.html" },
+    { "source": "/checkout/success", "destination": "/checkout/success.html" }
   ]
 }

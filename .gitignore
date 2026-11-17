@@ -1,8 +1,11 @@
 # Environment & local secrets
 .env
+.env*
 .env.local
 .env.*.local
 *.env
+*.pem
+*.key
 
 # Dependencies & build
 node_modules/

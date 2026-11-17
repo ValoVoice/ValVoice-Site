@@ -1340,3 +1340,272 @@ a.clickable-step:hover {
         transform: translateY(0);
     }
 }
+
+
+/* ==========================================================================
+   ValVoice Auth Modal & Header Auth Indicator
+   ========================================================================== */
+
+/* Auth Indicator in Header */
+.vv-auth-indicator {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.vv-auth-user-email {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.vv-auth-logout-btn {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.vv-auth-logout-btn:hover {
+    background: rgba(255,70,85,0.2);
+    border-color: rgba(255,70,85,0.4);
+    color: #ff4655;
+}
+
+/* Auth Modal Overlay */
+.vv-auth-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    align-items: center;
+    justify-content: center;
+    animation: vvFadeIn 0.2s ease;
+}
+
+@keyframes vvFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.vv-auth-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(4px);
+}
+
+.vv-auth-dialog {
+    position: relative;
+    background: rgba(12, 18, 30, 0.97);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 40px 36px;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    backdrop-filter: blur(20px);
+}
+
+.vv-auth-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 24px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.vv-auth-close:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+}
+
+.vv-auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    justify-content: center;
+}
+
+.vv-auth-logo img {
+    height: 36px;
+    width: auto;
+    border-radius: 4px;
+}
+
+.vv-auth-logo span {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.vv-auth-step h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.vv-auth-step p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.vv-auth-field {
+    margin-bottom: 16px;
+}
+
+.vv-auth-field input {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.vv-auth-field input::placeholder {
+    color: rgba(255,255,255,0.35);
+}
+
+.vv-auth-field input:focus {
+    border-color: rgba(255,70,85,0.5);
+    box-shadow: 0 0 0 3px rgba(255,70,85,0.1);
+}
+
+.vv-auth-btn {
+    width: 100%;
+    padding: 14px 20px !important;
+    font-size: 15px !important;
+    letter-spacing: 1px !important;
+    clip-path: none !important;
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+
+.vv-auth-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.vv-auth-resend {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 0.85rem;
+}
+
+.vv-auth-link-btn {
+    background: none;
+    border: none;
+    color: var(--valorant-red);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    padding: 2px 4px;
+    transition: var(--transition);
+}
+
+.vv-auth-link-btn:hover {
+    color: #ff8c95;
+    text-decoration: underline;
+}
+
+.vv-auth-resend span {
+    color: rgba(255,255,255,0.3);
+}
+
+.vv-auth-error {
+    background: rgba(255,70,85,0.1);
+    border: 1px solid rgba(255,70,85,0.3);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: #ff8c95;
+    text-align: center;
+}
+
+.vv-auth-loading {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 18, 30, 0.85);
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.vv-auth-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(255,255,255,0.1);
+    border-top-color: var(--valorant-red);
+    border-radius: 50%;
+    animation: vvSpin 0.8s linear infinite;
+}
+
+@keyframes vvSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* OTP input special styling */
+#vv-auth-otp {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 8px;
+    font-family: 'Outfit', monospace;
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    .vv-auth-dialog {
+        padding: 32px 24px;
+    }
+    .vv-auth-user-email {
+        display: none;
+    }
+}

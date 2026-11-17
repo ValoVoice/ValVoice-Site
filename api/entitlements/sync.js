@@ -22,7 +22,7 @@
 
 const { validateEnv } = require('../../lib/env');
 const { verifyUserToken, rpc, query } = require('../../lib/supabase');
-const { getSubscription } = require('../../lib/paddle');
+const { getSubscription, getTransaction } = require('../../lib/paddle');
 const { signEntitlementToken } = require('../../lib/token');
 const { json, handleMethodAndCors, extractBearerToken, withErrorHandling } = require('../../lib/http');
 const { env } = require('../../lib/env');
@@ -102,6 +102,67 @@ module.exports = withErrorHandling(async (req, res) => {
       }
     } catch (e) {
       console.warn(`[Sync] Failed to fetch live subscription ${sub.id} from Paddle:`, e.message);
+    }
+  }
+
+  // 4b. Reconcile lifetime purchases against live Paddle transactions.
+  //     Lifetime purchases are one-time transactions stored in the purchases table,
+  //     not in subscriptions. Without this step, a lost webhook for a lifetime purchase
+  //     would leave the user on the free tier with no way to self-heal via sync.
+  const lifetimePurchases = await query('purchases', 'GET',
+    `user_id=eq.${user.id}&is_lifetime=eq.true&status=eq.completed&select=id`
+  );
+
+  for (const purchase of (lifetimePurchases || [])) {
+    try {
+      // Verify the transaction is genuinely completed against live Paddle API
+      const liveTxn = await getTransaction(purchase.id);
+      const liveStatus = (liveTxn.status || '').toLowerCase();
+
+      if (liveStatus === 'completed') {
+        // Ensure the lifetime entitlement row exists and is active
+        const existing = await query('entitlements', 'GET',
+          `user_id=eq.${user.id}&source_type=eq.lifetime&source_id=eq.${encodeURIComponent(purchase.id)}&select=id,status`
+        );
+
+        if (existing?.length > 0) {
+          if (existing[0].status !== 'active') {
+            await query('entitlements', 'PATCH', `id=eq.${existing[0].id}`, {
+              status: 'active',
+              is_lifetime: true,
+              valid_until: null,
+              last_verified_at: new Date().toISOString(),
+            });
+            synced = true;
+          }
+        } else {
+          // Webhook-granted entitlement was lost — re-create from verified Paddle data
+          await query('entitlements', 'POST', '', {
+            user_id: user.id,
+            tier: 'pro',
+            source_type: 'lifetime',
+            source_id: purchase.id,
+            status: 'active',
+            is_lifetime: true,
+            valid_from: new Date().toISOString(),
+            valid_until: null,
+            last_verified_at: new Date().toISOString(),
+          }, 'return=minimal');
+          synced = true;
+          console.log(`[Sync] Re-created lifetime entitlement for user ${user.id} from purchase ${purchase.id}`);
+        }
+      } else if (liveStatus === 'refunded') {
+        // Paddle confirms the purchase was refunded — revoke
+        await query('purchases', 'PATCH', `id=eq.${encodeURIComponent(purchase.id)}`, { status: 'refunded' });
+        await query('entitlements', 'PATCH',
+          `user_id=eq.${user.id}&source_id=eq.${encodeURIComponent(purchase.id)}`,
+          { status: 'revoked' }
+        );
+        synced = true;
+        console.log(`[Sync] Lifetime purchase ${purchase.id} confirmed refunded by Paddle — entitlement revoked`);
+      }
+    } catch (e) {
+      console.warn(`[Sync] Failed to verify lifetime purchase ${purchase.id} from Paddle:`, e.message);
     }
   }
 

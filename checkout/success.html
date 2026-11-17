@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful | ValVoice</title>
+    <meta name="description" content="Your ValVoice purchase was successful. Download ValVoice and start using your Pro features.">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+
+    <style>
+        .success-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .success-card {
+            background: var(--valorant-card);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 50px 40px;
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 36px;
+        }
+        .success-icon.ok {
+            background: rgba(16, 185, 129, 0.15);
+            border: 2px solid rgba(16, 185, 129, 0.4);
+            color: #10b981;
+        }
+        .success-icon.pending {
+            background: rgba(251, 191, 36, 0.15);
+            border: 2px solid rgba(251, 191, 36, 0.4);
+            color: #fbbf24;
+        }
+        .success-icon.error {
+            background: rgba(255, 70, 85, 0.15);
+            border: 2px solid rgba(255, 70, 85, 0.4);
+            color: #ff4655;
+        }
+        .success-card h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        .success-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .success-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 32px;
+        }
+        .success-actions .btn-val-primary,
+        .success-actions .btn-val-neutral {
+            padding: 14px 28px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .sync-status {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 20px;
+        }
+        .sync-status.syncing { color: #fbbf24; }
+        .sync-status.synced { color: #10b981; }
+        .sync-status.failed { color: #ff4655; }
+        @media (max-width: 600px) {
+            .success-card { padding: 36px 24px; }
+            .success-card h1 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="/" class="logo">
+                <img src="/logo.png" alt="ValVoice Logo" class="custom-logo">
+                <div class="site-name">VALVOICE</div>
+            </a>
+        </div>
+    </header>
+
+    <div class="success-container">
+        <div class="success-card" id="success-card">
+            <!-- Default: loading state -->
+            <div class="success-icon pending" id="success-icon">
+                <i class="fas fa-spinner fa-spin"></i>
+            </div>
+            <h1 id="success-title">Processing Your Purchase...</h1>
+            <p id="success-message">Please wait while we verify your payment.</p>
+            <div class="sync-status syncing" id="sync-status">Verifying payment status...</div>
+            <div class="success-actions" id="success-actions" style="display:none;">
+                <a href="/download" class="btn-val-primary">Download ValVoice</a>
+                <a href="/" class="btn-val-neutral">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script>
+    (async function () {
+        const iconEl    = document.getElementById('success-icon');
+        const titleEl   = document.getElementById('success-title');
+        const msgEl     = document.getElementById('success-message');
+        const statusEl  = document.getElementById('sync-status');
+        const actionsEl = document.getElementById('success-actions');
+
+        function showSuccess(tier) {
+            const tierLabel = tier === 'free' ? 'Free' : tier === 'pro' ? 'Pro' : 'Premium';
+            iconEl.className = 'success-icon ok';
+            iconEl.innerHTML = '<i class="fas fa-check"></i>';
+            titleEl.textContent = 'Payment Successful!';
+            msgEl.textContent = `Your ValVoice ${tierLabel} access is now active. Download or open ValVoice to start using your upgraded features.`;
+            statusEl.className = 'sync-status synced';
+            statusEl.textContent = 'Entitlement verified ✓';
+            actionsEl.style.display = 'flex';
+        }
+
+        function showPending() {
+            iconEl.className = 'success-icon pending';
+            iconEl.innerHTML = '<i class="fas fa-clock"></i>';
+            titleEl.textContent = 'Payment Being Processed';
+            msgEl.textContent = 'Your payment is being processed. This usually takes a few moments. Your access will be activated automatically once confirmed.';
+            statusEl.className = 'sync-status syncing';
+            statusEl.textContent = 'Payment pending — check back shortly';
+            actionsEl.style.display = 'flex';
+        }
+
+        function showError(detail) {
+            iconEl.className = 'success-icon error';
+            iconEl.innerHTML = '<i class="fas fa-exclamation-triangle"></i>';
+            titleEl.textContent = 'Verification Issue';
+            msgEl.textContent = detail || 'We could not verify your payment at this time. If you completed payment, your access will be activated automatically via our payment processor.';
+            statusEl.className = 'sync-status failed';
+            statusEl.textContent = 'Could not sync — the Paddle webhook will handle activation';
+            actionsEl.style.display = 'flex';
+        }
+
+        try {
+            // 1. Fetch public config
+            const configResp = await fetch('/api/config');
+            if (!configResp.ok) throw new Error('Config unavailable');
+            const config = await configResp.json();
+
+            // 2. Restore Supabase session
+            const sb = window.supabase.createClient(config.supabaseUrl, config.supabaseAnonKey);
+            const { data: sessionData } = await sb.auth.getSession();
+            const session = sessionData?.session;
+
+            if (!session) {
+                // No session — user might have cleared cookies or opened in a new tab
+                showPending();
+                statusEl.textContent = 'Not signed in — sign in to ValVoice desktop app to verify your entitlement';
+                return;
+            }
+
+            // 3. Call entitlement sync to trigger server-side reconciliation
+            statusEl.textContent = 'Syncing entitlement...';
+            const syncResp = await fetch('/api/entitlements/sync', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${session.access_token}`,
+                },
+            });
+
+            if (syncResp.ok) {
+                const syncData = await syncResp.json();
+                if (syncData.tier && syncData.tier !== 'free') {
+                    showSuccess(syncData.tier);
+                } else {
+                    // Paddle webhook may not have arrived yet
+                    showPending();
+                }
+            } else {
+                // Sync failed — webhook will handle it
+                showPending();
+                statusEl.textContent = 'Sync pending — your payment is confirmed and will be processed shortly';
+            }
+        } catch (err) {
+            console.error('[Success] Error:', err.message);
+            showError();
+        }
+    })();
+    </script>
+</body>
+</html>
