@@ -1,5 +1,24 @@
 # ValVoice-Site Agent Rules
 
+## Git Identity (Mandatory)
+
+All commits to this repository and any ValoVoice organization repositories **must** use:
+
+| Field | Value |
+|---|---|
+| **Author name** | `ValVoice` |
+| **Author email** | `valorantvoiceofficials@gmail.com` |
+| **Committer name** | `ValVoice` |
+| **Committer email** | `valorantvoiceofficials@gmail.com` |
+
+Never use personal emails (e.g. `shreyashgupta999@gmail.com`) for ValoVoice commits.
+
+When committing via the GitHub API, always pass:
+```json
+"author": {"name": "ValVoice", "email": "valorantvoiceofficials@gmail.com"},
+"committer": {"name": "ValVoice", "email": "valorantvoiceofficials@gmail.com"}
+```
+
 ## Commit Policy (Mandatory)
 
 **Always commit directly to GitHub using the GitHub API (`gh api`) or GitHub Contents API.**
@@ -14,7 +33,11 @@ gh api repos/ValoVoice/ValVoice-Site/contents/<path> \
   --method PUT \
   --field message="<commit message>" \
   --field content="<base64 content>" \
-  --field sha="<current file sha>"
+  --field sha="<current file sha>" \
+  --field "author[name]=ValVoice" \
+  --field "author[email]=valorantvoiceofficials@gmail.com" \
+  --field "committer[name]=ValVoice" \
+  --field "committer[email]=valorantvoiceofficials@gmail.com"
 ```
 
 ## Deployment Architecture
