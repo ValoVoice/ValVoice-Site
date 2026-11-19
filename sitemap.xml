@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url><loc>https://valvoice.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-   <url><loc>https://valvoice.vercel.app/pricing.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-   <url><loc>https://valvoice.vercel.app/download.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-   <url><loc>https://valvoice.vercel.app/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-   <url><loc>https://valvoice.vercel.app/faq.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-   <url><loc>https://valvoice.vercel.app/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-   <url><loc>https://valvoice.vercel.app/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-   <url><loc>https://valvoice.vercel.app/refund-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-   <url><loc>https://valvoice.vercel.app/cookie-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-   <url><loc>https://valvoice.vercel.app/docs/index.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-   <url><loc>https://valvoice.vercel.app/docs/installation.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-   <url><loc>https://valvoice.vercel.app/docs/vb-cable-setup.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-   <url><loc>https://valvoice.vercel.app/docs/valorant-audio-settings.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-   <url><loc>https://valvoice.vercel.app/docs/troubleshooting.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+   <url><loc>https://valvoice.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+   <url><loc>https://valvoice.app/pricing.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+   <url><loc>https://valvoice.app/download.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+   <url><loc>https://valvoice.app/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+   <url><loc>https://valvoice.app/faq.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+   <url><loc>https://valvoice.app/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+   <url><loc>https://valvoice.app/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+   <url><loc>https://valvoice.app/refund-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+   <url><loc>https://valvoice.app/cookie-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+   <url><loc>https://valvoice.app/docs/index.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+   <url><loc>https://valvoice.app/docs/installation.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+   <url><loc>https://valvoice.app/docs/vb-cable-setup.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+   <url><loc>https://valvoice.app/docs/valorant-audio-settings.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+   <url><loc>https://valvoice.app/docs/troubleshooting.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 </urlset>
